@@ -1,0 +1,68 @@
+#!/bin/bash
+# sidux-hermes
+# Copyright (c) 2007 Fabian Wuertz
+# License GPL 2
+
+
+#------------------------------------------------------------------------------#
+#--- sidux warnings & news ----------------------------------------------------#
+#------------------------------------------------------------------------------#
+
+function duWarnings()
+{
+	TMP="$(mktemp -p /tmp/ du-warning-XXXXXXXXXX)"
+	wget -O $TMP -q -U "siduxcc-hermes" http://sidux.com/xBackends.php
+	tmp=`cat $TMP`
+	if [ -n "$tmp" ]; then 
+		egrep title $TMP | grep WARNING | cut -f2 -d"<" | cut -c7-
+		egrep title $TMP | grep Warning | cut -f2 -d"<" | cut -c7-
+	else
+		echo "disconnected"
+	fi
+	rm -f $TMP
+}
+
+function duWarningsEn()
+{
+	TMP="$(mktemp -p /tmp/ du-warning-XXXXXXXXXX)"
+	wget -O $TMP -q -U "siduxcc-hermes" http://sidux.com/backend.php
+	grep -A 1 Warning $TMP
+	rm -f $TMP
+}
+
+function duWarningsDe()
+{
+	TMP="$(mktemp -p /tmp/ du-warning-XXXXXXXXXX)"
+	wget -O $TMP -q -U "siduxcc-hermes" http://sidux.com/backend.php?newlang=deu
+	grep -A 1 Warnung $TMP
+	rm -f $TMP
+}
+
+function getNewsEn()
+{
+	TMP="$(mktemp -p /tmp/ sidux-news-XXXXXXXXXX)"
+	wget -O $TMP -q -U "siduxcc-hermes" http://sidux.com/backend.php
+	grep -A 1 title $TMP | grep -B 1 link
+	rm -f $TMP
+}
+
+function getNewsDe()
+{
+	TMP="$(mktemp -p /tmp/ sidux-news-XXXXXXXXXX)"
+	wget -O $TMP -q -U "siduxcc-hermes" http://sidux.com/backend.php?newlang=deu
+	grep -A 1 title $TMP | grep -B 1 link
+	rm -f $TMP
+} 
+
+
+#------------------------------------------------------------------------------#
+#--- start app ----------------------------------------------------------------#
+#------------------------------------------------------------------------------#
+
+case $1 in
+	"duWarnings"       ) duWarnings;;
+	"duWarningsEn"     ) duWarningsEn;;
+	"duWarningsDe"     ) duWarningsDe;;
+	"getNewsEn"        ) getNewsEn;;
+	"getNewsDe"        ) getNewsDe;;
+esac

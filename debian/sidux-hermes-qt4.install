@@ -1,0 +1,3 @@
+debian/tmp/usr/bin/sidux-hermes-qt4                                       usr/bin
+debian/tmp/usr/share/applications/sidux-hermes-qt4.desktop                usr/share/applications
+debian/tmp/usr/share/sidux-hermes/translations/*.qm                       usr/share/sidux-hermes/translations
