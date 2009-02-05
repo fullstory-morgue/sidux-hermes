@@ -75,5 +75,17 @@ Richard</translation>
         <source>Icons</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Kernel informations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Current kernel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Newest  kernel</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

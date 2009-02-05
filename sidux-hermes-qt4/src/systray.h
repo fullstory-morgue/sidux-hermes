@@ -20,24 +20,27 @@
 
 	public:
 		SysTray();
-		QTimer *timer;
 		
 	private slots:
 		void updateIcon();
 		void iconActivated(QSystemTrayIcon::ActivationReason reason);
-		void showMessage();
 		void showAbout();
 		void showForum();
 		void showManual();
+		void showKernel();
+		void showMessage();
 
 	private:
 		QAction *quitAction;
 		QAction *forumAction;
 		QAction *manualAction;
 		QAction *aboutAction;
+		QAction *kernelAction;
 		QSystemTrayIcon *trayIcon;
 		QMenu *trayIconMenu;
 		QString status;
+		QTimer *timer;
+		QString readProcess(QString, QStringList);
 
 
  };

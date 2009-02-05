@@ -17,6 +17,10 @@
 	connect(forumAction, SIGNAL(triggered()), this, SLOT(showForum()));
 	manualAction = new QAction(tr("Manual - Upgrade of an Installed System"), this);
 	connect(manualAction, SIGNAL(triggered()), this, SLOT(showManual()));
+
+	kernelAction = new QAction(tr("Kernel informations"), this);
+	connect(kernelAction, SIGNAL(triggered()), this, SLOT(showKernel()));
+
 	aboutAction = new QAction(tr("About sidux-hermes"), this);
 	connect(aboutAction, SIGNAL(triggered()), this, SLOT(showAbout()));
 
@@ -25,6 +29,7 @@
 	trayIconMenu = new QMenu();
 	trayIconMenu->addAction(forumAction);
 	trayIconMenu->addAction(manualAction);
+	trayIconMenu->addAction(kernelAction);
 	trayIconMenu->addAction(aboutAction);
 	trayIconMenu->addSeparator();
 	trayIconMenu->addAction(quitAction);
@@ -49,13 +54,7 @@
 void SysTray::updateIcon()
 {
 
-	QProcess exec;
-	QStringList arguments;
-	arguments << "duWarnings";
-	exec.start("sidux-hermes", arguments);
-
-	exec.waitForFinished();
-	QString result = QString( exec.readAll() );
+	QString result  = readProcess("sidux-hermes", (QStringList() << "duWarnings")  );
 
 	if ( result == "disconnected\n" )
 	{
@@ -78,7 +77,7 @@ void SysTray::updateIcon()
 
 	trayIcon->setToolTip( result );
 	
-	QTimer::singleShot(30000, this, SLOT(updateIcon()));
+	QTimer::singleShot(1800000, this, SLOT(updateIcon()));
 	
 }
 
@@ -108,6 +107,22 @@ void SysTray::iconActivated(QSystemTrayIcon::ActivationReason reason)
 void SysTray::showMessage()
 {
 	trayIcon->showMessage ( tr("Status"), status, QSystemTrayIcon::Information, 10000 );
+}
+
+
+void SysTray::showKernel()
+{
+
+
+	QString currentKernel = readProcess("sidux-hermes", (QStringList() << "currentKernel") ).replace("\n", "");
+	QString newestKernel  = readProcess("sidux-hermes", (QStringList() << "newestKernel")  ).replace("\n", "");
+
+	QString kernel;
+
+	kernel += "\n"+tr("Current kernel")+": "+currentKernel;
+	kernel += "\n"+tr("Newest  kernel")+": "+newestKernel;
+
+	trayIcon->showMessage ( tr("Kernel informations"), kernel, QSystemTrayIcon::Information, 10000 );
 }
 
 void SysTray::showAbout()
@@ -158,6 +173,17 @@ void SysTray::showManual()
  	if( manualLanguages.indexOf(locale) == -1)
 		locale = "en";
 
-	trayIcon->showMessage ( tr("About sidux-hermes"), locale, QSystemTrayIcon::Information, 20000 );
 	QDesktopServices::openUrl(QUrl("http://manual.sidux.com/" + locale + "/sys-admin-apt-" + locale + ".htm#apt-upgrade"));
+}
+
+//------------------------------------------------------------------------------
+//-- exec ----------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
+QString SysTray::readProcess(QString run, QStringList arguments)
+{
+	QProcess exec;
+	exec.start(run, arguments);
+	exec.waitForFinished();
+	return QString( exec.readAll() );
 }

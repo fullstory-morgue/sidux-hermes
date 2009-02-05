@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="de">
+<!DOCTYPE TS><TS>
 <defaultcodec></defaultcodec>
 <context>
     <name>QObject</name>
@@ -34,14 +33,6 @@ repository. It gets the warnings from the sidux homepage.</source>
     <message>
         <source>Programmer</source>
         <translation>Programmierer</translation>
-    </message>
-    <message>
-        <source>Translators</source>
-        <translation type="obsolete">Übersetzer</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="obsolete">Deutsch</translation>
     </message>
     <message>
         <source>About sidux-hermes</source>
@@ -82,6 +73,18 @@ repository. It gets the warnings from the sidux homepage.</source>
     <message>
         <source>Icons</source>
         <translation>Icons</translation>
+    </message>
+    <message>
+        <source>Kernel informations</source>
+        <translation>Kernel Informationen</translation>
+    </message>
+    <message>
+        <source>Current kernel</source>
+        <translation>Verwendeter Kernel</translation>
+    </message>
+    <message>
+        <source>Newest  kernel</source>
+        <translation>Neuster Kernel</translation>
     </message>
 </context>
 </TS>

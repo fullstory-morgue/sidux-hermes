@@ -1,5 +1,8 @@
 sidux-hermes (0.1.0) unstable; urgency=low
 
   * Initial release.
+  * Qt4: update time changed
+  * Cli: kernel function added
+  * QT4: Kernel function added
 
- -- Fabian Wuertz <xadras@sidux.com>  Sun, 21 Dec 2008 23:59:59 +0100
+ -- Fabian Wuertz <xadras@sidux.com>  Thu, 05 Feb 2009 22:09:00 +0100

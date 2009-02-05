@@ -54,6 +54,29 @@ function getNewsDe()
 	rm -f $TMP
 } 
 
+#------------------------------------------------------------------------------#
+#--- kernel functions ---------------------------------------------------------#
+#------------------------------------------------------------------------------#
+
+function kernelType()
+{
+	if [ -n "$(uname -r | grep 686)" ]; then
+		echo 686
+	elif [ -n "$(uname -r | grep amd64)" ]; then
+		echo amd64
+	fi
+}
+
+function currentKernel()
+{
+	uname -r
+}
+
+function newestKernel()
+{
+	wget -U "siduxcc-hermes" -O - http://sidux.com/debian/pool/main/l/linux-sidux-2.6/ 2>/dev/null | grep linux-image | grep $(kernelType) | tail -n 1 | cut -f8 -d\" | cut -f1 -d_ | cut -f3- -d-
+}
+
 
 #------------------------------------------------------------------------------#
 #--- start app ----------------------------------------------------------------#
@@ -65,4 +88,6 @@ case $1 in
 	"duWarningsDe"     ) duWarningsDe;;
 	"getNewsEn"        ) getNewsEn;;
 	"getNewsDe"        ) getNewsDe;;
+	"currentKernel"    ) currentKernel;;
+	"newestKernel"     ) newestKernel;;
 esac
