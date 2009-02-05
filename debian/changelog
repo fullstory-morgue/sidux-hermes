@@ -4,5 +4,6 @@ sidux-hermes (0.1.0) unstable; urgency=low
   * Qt4: update time changed
   * Cli: kernel function added
   * QT4: Kernel function added
+  * Gtk2: conlicts tag updated
 
- -- Fabian Wuertz <xadras@sidux.com>  Thu, 05 Feb 2009 22:09:00 +0100
+ -- Fabian Wuertz <xadras@sidux.com>  Thu, 05 Feb 2009 22:31:29 +0100

@@ -21,7 +21,7 @@ Description: sidux-hermes
 Package: sidux-hermes-gtk2
 Architecture: all
 Depends: sidux-hermes (= ${source:Version}), python, python-gtk2
-Conflicts: siduxcc-gtk2 
+Conflicts: siduxcc-gtk2 (<= 0.12.12)
 Description: sidux-hermes-gtk2
  sidux dist-upgrade alerter
 
