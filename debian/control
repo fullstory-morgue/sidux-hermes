@@ -14,19 +14,25 @@ Standards-Version: 3.8.0
 
 Package: sidux-hermes
 Architecture: all
-Depends: wget
+Depends: ${misc:Depends},
+         wget
 Description: sidux-hermes
  sidux dist-upgrade alerter
 
 Package: sidux-hermes-gtk2
 Architecture: all
-Depends: sidux-hermes (= ${source:Version}), python, python-gtk2
+Depends: ${misc:Depends},
+         sidux-hermes (= ${source:Version}),
+         python,
+         python-gtk2
 Conflicts: siduxcc-gtk2 (<= 0.12.12)
 Description: sidux-hermes-gtk2
  sidux dist-upgrade alerter
 
 Package: sidux-hermes-qt4
 Architecture: any
-Depends: ${shlibs:Depends}, sidux-hermes (= ${source:Version})
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         sidux-hermes (= ${source:Version})
 Description: sidux-hermes-qt4
  sidux dist-upgrade alerter
