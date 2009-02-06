@@ -5,11 +5,12 @@
 #include <QTimer>
 #include <QMenu>
 #include <QMessageBox>
+#include <QListView>
 
  #include "systray.h"
 
- SysTray::SysTray()
- {
+SysTray::SysTray()
+{
 
 	quitAction = new QAction(tr("&Close"), this);
 	connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
@@ -17,12 +18,12 @@
 	connect(forumAction, SIGNAL(triggered()), this, SLOT(showForum()));
 	manualAction = new QAction(tr("Manual - Upgrade of an Installed System"), this);
 	connect(manualAction, SIGNAL(triggered()), this, SLOT(showManual()));
-
 	kernelAction = new QAction(tr("Kernel informations"), this);
 	connect(kernelAction, SIGNAL(triggered()), this, SLOT(showKernel()));
-
 	aboutAction = new QAction(tr("About sidux-hermes"), this);
 	connect(aboutAction, SIGNAL(triggered()), this, SLOT(showAbout()));
+	upgradablePackagesAction = new QAction(tr("Upgradable packages"), this);
+	connect(upgradablePackagesAction, SIGNAL(triggered()), this, SLOT(showUpgradablePackages()));
 
 
 
@@ -30,6 +31,7 @@
 	trayIconMenu->addAction(forumAction);
 	trayIconMenu->addAction(manualAction);
 	trayIconMenu->addAction(kernelAction);
+	trayIconMenu->addAction(upgradablePackagesAction);
 	trayIconMenu->addAction(aboutAction);
 	trayIconMenu->addSeparator();
 	trayIconMenu->addAction(quitAction);
@@ -45,10 +47,11 @@
 
 	connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
 
+
 	timer = new QTimer(this);
+	upWidget = new up();
 	
 	updateIcon();
-
 }
 
 void SysTray::updateIcon()
@@ -101,7 +104,6 @@ void SysTray::iconActivated(QSystemTrayIcon::ActivationReason reason)
 			;
 	}
 }
-
 
 
 void SysTray::showMessage()
@@ -174,6 +176,15 @@ void SysTray::showManual()
 		locale = "en";
 
 	QDesktopServices::openUrl(QUrl("http://manual.sidux.com/" + locale + "/sys-admin-apt-" + locale + ".htm#apt-upgrade"));
+}
+
+//------------------------------------------------------------------------------
+//-- upgradable packages -------------------------------------------------------
+//------------------------------------------------------------------------------
+
+void SysTray::showUpgradablePackages()
+{
+	upWidget->init();
 }
 
 //------------------------------------------------------------------------------

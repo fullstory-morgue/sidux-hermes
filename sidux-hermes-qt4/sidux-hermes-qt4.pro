@@ -11,7 +11,8 @@ MOC_DIR = build/
 DESTDIR = .
 
 SOURCES += src/main.cpp \
- src/systray.cpp
+ src/systray.cpp \
+ src/upgradablePackages.cpp
 
 TRANSLATIONS = translations/sidux-hermes-qt4_da.ts \
  translations/sidux-hermes-qt4_de.ts \
@@ -36,6 +37,8 @@ langtarget.files = translations/*.qm
 
 INSTALLS += target shortcuttarget langtarget
 
-HEADERS += src/systray.h
+HEADERS += src/systray.h \
+ src/upgradablePackages.h
 TARGET = sidux-hermes-qt4
 
+FORMS += src/upgradablePackages.ui

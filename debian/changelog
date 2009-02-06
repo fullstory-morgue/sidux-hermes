@@ -10,4 +10,8 @@ sidux-hermes (0.1.0) unstable; urgency=low
   [ Stefan Lippers-Hollmann ]
   * add ${misc:Depends} where needed.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 05 Feb 2009 22:39:29 +0100
+  [ Fabian Wuertz ]
+  * QT4: upgradable packages dialog added.
+  * QT4: sidux-apt-qt4 options added. 
+
+ -- Fabian Wuertz <xadras@sidux.com>  Fri, 06 Feb 2009 18:57:27 +0100

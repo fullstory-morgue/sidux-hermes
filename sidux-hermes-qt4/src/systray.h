@@ -1,21 +1,14 @@
- #ifndef SYSTRAY_H
- #define SYSTRAY_H
+#ifndef SYSTRAY_H
+#define SYSTRAY_H
 
- #include <QSystemTrayIcon>
+#include <QSystemTrayIcon>
+#include <QAction>
+#include <QWidget>
 
- class QAction;
- class QCheckBox;
- class QComboBox;
- class QGroupBox;
- class QLabel;
- class QLineEdit;
- class QMenu;
- class QPushButton;
- class QSpinBox;
- class QTextEdit;
+#include "upgradablePackages.h"
 
- class SysTray : public QObject
- {
+class SysTray : public QObject
+{
 	Q_OBJECT
 
 	public:
@@ -29,6 +22,7 @@
 		void showManual();
 		void showKernel();
 		void showMessage();
+		void showUpgradablePackages();
 
 	private:
 		QAction *quitAction;
@@ -36,13 +30,14 @@
 		QAction *manualAction;
 		QAction *aboutAction;
 		QAction *kernelAction;
+		QAction *upgradablePackagesAction;
 		QSystemTrayIcon *trayIcon;
 		QMenu *trayIconMenu;
 		QString status;
 		QTimer *timer;
 		QString readProcess(QString, QStringList);
+		up* upWidget;
 
+};
 
- };
-
- #endif 
+#endif 

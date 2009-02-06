@@ -33,6 +33,7 @@ Package: sidux-hermes-qt4
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
-         sidux-hermes (= ${source:Version})
+         sidux-hermes (= ${source:Version}),
+         sidux-apt-qt4
 Description: sidux-hermes-qt4
  sidux dist-upgrade alerter

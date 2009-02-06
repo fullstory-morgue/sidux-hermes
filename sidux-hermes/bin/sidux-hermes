@@ -78,16 +78,23 @@ function newestKernel()
 }
 
 
+function getUpgradablePackages()
+{
+	LANG=C apt-show-versions | grep upgradeable
+}
+
+
 #------------------------------------------------------------------------------#
 #--- start app ----------------------------------------------------------------#
 #------------------------------------------------------------------------------#
 
 case $1 in
-	"duWarnings"       ) duWarnings;;
-	"duWarningsEn"     ) duWarningsEn;;
-	"duWarningsDe"     ) duWarningsDe;;
-	"getNewsEn"        ) getNewsEn;;
-	"getNewsDe"        ) getNewsDe;;
-	"currentKernel"    ) currentKernel;;
-	"newestKernel"     ) newestKernel;;
+	"duWarnings"            ) duWarnings;;
+	"duWarningsEn"          ) duWarningsEn;;
+	"duWarningsDe"          ) duWarningsDe;;
+	"getNewsEn"             ) getNewsEn;;
+	"getNewsDe"             ) getNewsDe;;
+	"currentKernel"         ) currentKernel;;
+	"newestKernel"          ) newestKernel;;
+	"getUpgradablePackages" ) getUpgradablePackages;;
 esac

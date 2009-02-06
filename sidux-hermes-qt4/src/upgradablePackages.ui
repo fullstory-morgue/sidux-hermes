@@ -1,0 +1,179 @@
+<ui version="4.0" >
+ <class>upgradablePackages</class>
+ <widget class="QWidget" name="upgradablePackages" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>593</width>
+    <height>412</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Upgradable Packages</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" >
+   <item row="0" column="0" colspan="7" >
+    <widget class="QTreeWidget" name="treeWidget" >
+     <property name="rootIsDecorated" >
+      <bool>false</bool>
+     </property>
+     <column>
+      <property name="text" >
+       <string>Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Installed Version</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Latest Version</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="7" >
+    <widget class="Line" name="line1" >
+     <property name="frameShape" >
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="frameShadow" >
+      <enum>QFrame::Sunken</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" >
+    <spacer name="spacer9" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType" >
+      <enum>QSizePolicy::Expanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>219</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="1" >
+    <widget class="QPushButton" name="reloadPushButton" >
+     <property name="toolTip" >
+      <string>Reload the current package list of 
+siduxcc-hermes. Use this option if 
+you have updated the package list 
+without siduxcc-hermes.</string>
+     </property>
+     <property name="text" >
+      <string>relo&amp;ad</string>
+     </property>
+     <property name="shortcut" >
+      <string>Alt+A</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2" >
+    <widget class="QPushButton" name="downloadPushButton" >
+     <property name="enabled" >
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font" >
+      <font/>
+     </property>
+     <property name="toolTip" >
+      <string>package files are only retrieved, not
+unpacked or installed.
+
+Command: apt-get -d dist-upgrade</string>
+     </property>
+     <property name="text" >
+      <string>d&amp;ownload</string>
+     </property>
+     <property name="shortcut" >
+      <string>Alt+O</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="3" >
+    <widget class="QPushButton" name="updatePushButton" >
+     <property name="toolTip" >
+      <string>update is used to resynchronize the package 
+index files from their sources. The indexes 
+of available packages are fetched from the 
+location(s) specified in /etc/apt/sources.list.
+
+Command: apt-get update</string>
+     </property>
+     <property name="text" >
+      <string>&amp;update </string>
+     </property>
+     <property name="shortcut" >
+      <string>Alt+U</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4" >
+    <widget class="QPushButton" name="upgradePushButton" >
+     <property name="toolTip" >
+      <string>Reload the current package list of 
+siduxcc-hermes. Use this option if 
+you have updated the package list 
+without siduxcc-hermes.</string>
+     </property>
+     <property name="text" >
+      <string>upgrade</string>
+     </property>
+     <property name="shortcut" >
+      <string>Alt+A</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="5" >
+    <widget class="QPushButton" name="closePushButton" >
+     <property name="text" >
+      <string>&amp;close</string>
+     </property>
+     <property name="shortcut" >
+      <string>Alt+C</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="6" />
+ <tabstops>
+  <tabstop>treeWidget</tabstop>
+  <tabstop>reloadPushButton</tabstop>
+  <tabstop>updatePushButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>closePushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>upgradablePackages</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>546</x>
+     <y>351</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>296</x>
+     <y>186</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
