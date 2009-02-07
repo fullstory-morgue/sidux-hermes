@@ -14,5 +14,6 @@ sidux-hermes (0.1.0) unstable; urgency=low
   * QT4: upgradable packages dialog added.
   * QT4: sidux-apt-qt4 options added. 
   * QT4: display upgradable packages function updated.
+  * QT4: de translation updated.
 
- -- Fabian Wuertz <xadras@sidux.com>  Sat, 07 Feb 2009 10:40:04 +0100
+ -- Fabian Wuertz <xadras@sidux.com>  Sat, 07 Feb 2009 12:11:08 +0100

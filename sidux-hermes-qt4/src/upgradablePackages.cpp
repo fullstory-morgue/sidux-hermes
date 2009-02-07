@@ -20,7 +20,8 @@
 
 #include "upgradablePackages.h"
 #include <QWhatsThis>
-up::up (QWidget* parent, Qt::WFlags flags): QWidget (parent, flags)
+
+upgradablePackages::upgradablePackages (QWidget* parent, Qt::WFlags flags): QWidget (parent, flags)
 {
 	setupUi(this);
 
@@ -34,23 +35,20 @@ up::up (QWidget* parent, Qt::WFlags flags): QWidget (parent, flags)
 }
 
 
-void up::init()
+void upgradablePackages::init()
 {
 
 	if( isHidden() ) {
 		show();
-		if ( treeWidget->topLevelItemCount() == 0 ) {
-			QTreeWidgetItem * item = new QTreeWidgetItem( treeWidget, 0 );
-			item->setText(0,tr("Please wait")); 
+		if ( treeWidget->topLevelItemCount() == 0 )
 			getPackages(); 
-		}
 
 	}
 	else
 		hide();
 }
 
-void up::getPackages()
+void upgradablePackages::getPackages()
 {
 
 	reloadPushButton->setEnabled(FALSE);
@@ -70,13 +68,13 @@ void up::getPackages()
 }
 
 
-void up::readOutput()
+void upgradablePackages::readOutput()
 {
 	packages += QString(process->readAllStandardOutput());
 
 }
 
-void up::displayPackages()
+void upgradablePackages::displayPackages()
 {
 	treeWidget->clear();
 	packages.replace("\n", " ");
@@ -105,25 +103,25 @@ void up::displayPackages()
 
 
 
-void up::upgrade()
+void upgradablePackages::upgrade()
 {
 	QWhatsThis::showText( QCursor::pos(), tr("To update your system you have to leave the graphic modus. Press for this CTR+ALT+F1, login as root and type init 3. After that run the command smxi or siduxcc (Software->Dist-upgrade)."), this );
 
 }
 
-void up::update()
+void upgradablePackages::update()
 {
 	runSAQ("update");
 }
 
 
-void up::download()
+void upgradablePackages::download()
 {
 	runSAQ("download");;
 
 }
 
-void up::runSAQ(QString argument)
+void upgradablePackages::runSAQ(QString argument)
 {
 
 	QString program = "su-to-root";
@@ -134,7 +132,7 @@ void up::runSAQ(QString argument)
 	saqProcess->start(program, arguments);
 }
 
-void up::closeEvent(QCloseEvent *event)
+void upgradablePackages::closeEvent(QCloseEvent *event)
 {
 	hide();
 	event->ignore();

@@ -27,12 +27,12 @@
 
 #include "ui_upgradablePackages.h"
 
-class up : public QWidget, Ui::upgradablePackages
+class upgradablePackages : public QWidget, Ui::upgradablePackages
 {
 	Q_OBJECT
 
 	public:
-		up(QWidget* parent = 0, Qt::WFlags flags = 0);
+		upgradablePackages(QWidget* parent = 0, Qt::WFlags flags = 0);
 		void init();
 
 

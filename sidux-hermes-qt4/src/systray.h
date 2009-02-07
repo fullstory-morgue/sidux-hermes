@@ -36,7 +36,7 @@ class SysTray : public QObject
 		QString status;
 		QTimer *timer;
 		QString readProcess(QString, QStringList);
-		up* upWidget;
+		upgradablePackages* upWidget;
 
 };
 

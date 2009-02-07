@@ -7,7 +7,7 @@
 #include <QMessageBox>
 #include <QListView>
 
- #include "systray.h"
+#include "systray.h"
 
 SysTray::SysTray()
 {
@@ -49,7 +49,7 @@ SysTray::SysTray()
 
 
 	timer = new QTimer(this);
-	upWidget = new up();
+	upWidget = new upgradablePackages();
 	
 	updateIcon();
 }
