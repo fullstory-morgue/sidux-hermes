@@ -17,7 +17,9 @@ Architecture: all
 Depends: ${misc:Depends},
          wget
 Description: sidux-hermes
- sidux dist-upgrade alerter
+ Console program that shows the status of the Debian sid repository.
+ .
+ It gets the warnings from sidux.com.
 
 Package: sidux-hermes-gtk2
 Architecture: all
@@ -27,7 +29,9 @@ Depends: ${misc:Depends},
          python-gtk2
 Conflicts: siduxcc-gtk2 (<= 0.12.12)
 Description: sidux-hermes-gtk2
- sidux dist-upgrade alerter
+ Gtk2 systray applet that shows the status of the Debian sid repository.
+ .
+ It gets the warnings from sidux.com.
 
 Package: sidux-hermes-qt4
 Architecture: any
@@ -36,4 +40,6 @@ Depends: ${misc:Depends},
          sidux-hermes (= ${source:Version}),
          sidux-apt-qt4
 Description: sidux-hermes-qt4
- sidux dist-upgrade alerter
+ Qt4 systray applet that shows the status of the Debian sid repository.
+ .
+ It gets the warnings from sidux.com.
