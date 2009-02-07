@@ -59,9 +59,7 @@ void up::getPackages()
 	downloadPushButton->setEnabled(FALSE);
 	closePushButton->setEnabled(FALSE);
 	treeWidget->clear();
-	name.clear();
-	currentVersion.clear();
-	newVersion.clear();
+	packages.clear();
 
 	QTreeWidgetItem *item = new QTreeWidgetItem( treeWidget, 0 );
 	item->setText( 0,tr("Plase wait") );
@@ -74,37 +72,28 @@ void up::getPackages()
 
 void up::readOutput()
 {
-	QByteArray result;
-	result = process->readAllStandardOutput();
+	packages += QString(process->readAllStandardOutput());
 
-	QStringList packages = QString(result).split("\n");
-	QStringList tmp;
-	foreach( QString package, packages ) {
-		package.replace("*manually* ", "" );
-		if(package != "") {
-			tmp = package.split( "/" );
-				name.append(tmp[0]);
-			tmp = package.split( " " );
-			if(tmp.count() > 3)
-				currentVersion.append(tmp[3]);
-			else
-				currentVersion.append("");
-			if(tmp.count() > 5)
-				newVersion.append(tmp[5]); 
-			else
-				newVersion.append("");
-		}
-	}
 }
 
 void up::displayPackages()
 {
 	treeWidget->clear();
-	for( int i = 0; i < name.count(); i++) {
-		QTreeWidgetItem * item = new QTreeWidgetItem( treeWidget, 0 );
-		item->setText( 0, name[i] );
-		item->setText( 1, currentVersion[i] );
-		item->setText( 2, newVersion[i] );
+	packages.replace("\n", " ");
+	packages.replace("*manually* ", "");
+	packages.replace("/", "@");
+	packages.replace(" upgradeable from ", "@");
+	packages.replace(" to ", "@");
+  
+
+	foreach( QString package, packages.split(" ") ) {
+		QStringList tmpArray = package.split("@");
+		if( tmpArray.count() == 4) {
+			QTreeWidgetItem * item = new QTreeWidgetItem( treeWidget, 0 );
+			item->setText( 0, tmpArray[0] );
+			item->setText( 1, tmpArray[2] );
+			item->setText( 2, tmpArray[3] );
+		}
 	}
 	reloadPushButton->setEnabled(TRUE);
 	upgradePushButton->setEnabled(TRUE);

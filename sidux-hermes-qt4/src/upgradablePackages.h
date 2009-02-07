@@ -48,7 +48,7 @@ class up : public QWidget, Ui::upgradablePackages
 
 	private:
 		QProcess *process;
-		QStringList name, currentVersion, newVersion;
+		QString packages;
 
 	protected:
 		void closeEvent(QCloseEvent *event);
