@@ -15,7 +15,8 @@ Standards-Version: 3.8.0
 Package: sidux-hermes
 Architecture: all
 Depends: ${misc:Depends},
-         wget
+         wget,
+         apt-show-versions
 Description: sidux-hermes
  Console program that shows the status of the Debian sid repository.
  .
