@@ -1,8 +1,12 @@
 sidux-hermes (0.1.1) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 10 Feb 2009 02:23:57 +0100
+  [ Fabian Wuertz ]
+  * qt4: tooltip of the upgrade button fixed.
+
+ -- Fabian Wuertz <xadras@sidux.com>  Wed, 11 Feb 2009 17:30:18 +0100
 
 sidux-hermes (0.1.0) unstable; urgency=low
 

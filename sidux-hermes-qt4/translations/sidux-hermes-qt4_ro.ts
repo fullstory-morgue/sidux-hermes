@@ -92,9 +92,6 @@ repository. It gets the warnings from the sidux homepage.</source>
     </message>
 </context>
 <context>
-    <name>up</name>
-</context>
-<context>
     <name>upgradablePackages</name>
     <message>
         <source>Upgradable Packages</source>
@@ -176,7 +173,11 @@ Command: apt-get update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>To update your system you have to leave the graphic modus. Press for this CTR+ALT+F1, login as root and type init 3. After that run the command smxi or siduxcc (Software-&gt;Dist-upgrade).</source>
+        <source>To update your system you have to leave the 
+graphic modus. Press for this CTR+ALT+F1, 
+login as root and type init 3. After that 
+run the command smxi or siduxcc (Software-&gt;
+Dist-upgrade).</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

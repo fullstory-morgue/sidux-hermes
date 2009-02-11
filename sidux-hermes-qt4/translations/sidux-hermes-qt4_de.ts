@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="de">
+<!DOCTYPE TS><TS>
 <defaultcodec></defaultcodec>
 <context>
     <name>QObject</name>
@@ -185,8 +184,16 @@ Befehl: apt-get update</translation>
         <translation>Bitte warten</translation>
     </message>
     <message>
-        <source>To update your system you have to leave the graphic modus. Press for this CTR+ALT+F1, login as root and type init 3. After that run the command smxi or siduxcc (Software-&gt;Dist-upgrade).</source>
-        <translation>Für einen Systemupgrade muss der graphische Modus verlassen werden. Hierzu CTR+ALT+F1 drücken, sich als root einloggen und init 3 eingeben. Danach den Befehl smxi oder siduxcc (Software-&gt;Dist-upgrade) ausführen.</translation>
+        <source>To update your system you have to leave the 
+graphic modus. Press for this CTR+ALT+F1, 
+login as root and type init 3. After that 
+run the command smxi or siduxcc (Software-&gt;
+Dist-upgrade).</source>
+        <translation>Für einen Systemupgrade muss der graphische 
+Modus verlassen werden. Hierzu CTR+ALT+F1 
+drücken, sich als root einloggen und init 3 einge-
+ben. Danach den Befehl smxi oder siduxcc 
+(Software-&gt;Dist-upgrade) ausführen.</translation>
     </message>
 </context>
 </TS>

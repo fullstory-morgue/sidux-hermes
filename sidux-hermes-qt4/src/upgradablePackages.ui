@@ -126,10 +126,11 @@ Command: apt-get update</string>
    <item row="4" column="4" >
     <widget class="QPushButton" name="upgradePushButton" >
      <property name="toolTip" >
-      <string>Reload the current package list of 
-siduxcc-hermes. Use this option if 
-you have updated the package list 
-without siduxcc-hermes.</string>
+      <string>To update your system you have to leave the 
+graphic modus. Press for this CTR+ALT+F1, 
+login as root and type init 3. After that 
+run the command smxi or siduxcc (Software->
+Dist-upgrade).</string>
      </property>
      <property name="text" >
       <string>upgrade</string>
