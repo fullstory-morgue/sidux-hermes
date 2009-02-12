@@ -1,9 +1,5 @@
-sidux-hermes (0.1.1) UNRELEASED; urgency=low
+sidux-hermes (0.1.1) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * qt4: tooltip of the upgrade button fixed.
   * debian: missing dependency apt-show-versions added.
 
