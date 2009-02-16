@@ -1,9 +1,5 @@
-sidux-hermes (0.1.2) UNRELEASED; urgency=low
+sidux-hermes (0.1.2) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * sidux-hermes man pages added.
   * prealert status added.
   * qt4: reload of the upgradable packages view after an update.
