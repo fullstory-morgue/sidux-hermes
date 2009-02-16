@@ -27,7 +27,7 @@
     </message>
     <message>
         <source>No connection to sidux.com.</source>
-        <translation>sidux.comに接続していません.</translation>
+        <translation type="obsolete">sidux.comに接続していません.</translation>
     </message>
     <message>
         <source>No dist-upgrade warnings.</source>
@@ -35,7 +35,7 @@
     </message>
     <message>
         <source>There are dist-upgrade warnings. Please visit sidux.com for more information!</source>
-        <translation>dist-upgradeの警告があります. sidux.comのフォーラムで詳しい情報を読んでください!</translation>
+        <translation type="obsolete">dist-upgradeの警告があります. sidux.comのフォーラムで詳しい情報を読んでください!</translation>
     </message>
     <message>
         <source>Status</source>
@@ -90,6 +90,18 @@ muchan.m@gmail.com</translation>
     </message>
     <message>
         <source>Upgradable packages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No connection to sidux.com!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There are dist-upgrade pre-alerts. Please visit sidux.com for more information!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There are dist-upgrade alerts. Please visit sidux.com for more information!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

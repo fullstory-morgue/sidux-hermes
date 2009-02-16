@@ -61,12 +61,16 @@ class MyStatusIcon(gtk.StatusIcon):
                 self.menu.popup(None, None, None, button, time)
 
         def updateIcon(self):
-            stdout_handle = os.popen("sidux-hermes duWarnings", "r")
+            stdout_handle = os.popen("sidux-hermes", "r")
             text = stdout_handle.read()
-            if text == '':
+            if text == 'No connection to sidux.com!\n':
+                self.set_from_file('/usr/share/sidux-hermes/icons/disconnected.png')
+            if text == 'Everything alright!\n':
                 self.set_from_file('/usr/share/sidux-hermes/icons/ok-hermes.png')
+            elif "Prealert" in text or "PREALERT" in text:
+                self.set_from_file('/usr/share/sidux-hermes/icons/prealert.png')
             else:
-                self.set_from_file('/usr/share/sidux-hermes/icons/notok-hermes.png')
+                self.set_from_file('/usr/share/sidux-hermes/icons/alert.png')
             self.timeoutId  = gobject.timeout_add(1800000, self.updateIcon) # 1800000msec = 30min
 
 

@@ -26,16 +26,12 @@
         <translation>Om siduxcc-hermes</translation>
     </message>
     <message>
-        <source>No connection to sidux.com.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>No dist-upgrade warnings.</source>
         <translation>Der er ingen advarsler.</translation>
     </message>
     <message>
         <source>There are dist-upgrade warnings. Please visit sidux.com for more information!</source>
-        <translation>Der er dist-upgrade advarsler. Foretag ikke en dist-upgrade! Besøg venligst sidux.com for yderligere information!</translation>
+        <translation type="obsolete">Der er dist-upgrade advarsler. Foretag ikke en dist-upgrade! Besøg venligst sidux.com for yderligere information!</translation>
     </message>
     <message>
         <source>Status</source>
@@ -88,6 +84,18 @@ repository. It gets the warnings from the sidux homepage.</source>
     </message>
     <message>
         <source>Upgradable packages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No connection to sidux.com!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There are dist-upgrade pre-alerts. Please visit sidux.com for more information!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There are dist-upgrade alerts. Please visit sidux.com for more information!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

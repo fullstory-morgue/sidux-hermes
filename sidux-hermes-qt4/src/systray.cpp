@@ -57,24 +57,29 @@ SysTray::SysTray()
 void SysTray::updateIcon()
 {
 
-	QString result  = readProcess("sidux-hermes", (QStringList() << "duWarnings")  );
+	QString result  = readProcess("sidux-hermes", QStringList() );
 
-	if ( result == "disconnected\n" )
+	if ( result == "No connection to sidux.com!\n" )
 	{
 		trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/disconnected.png") );
-		status = tr("No connection to sidux.com.");
+		status = tr("No connection to sidux.com!");
 	}
 	else
 	{
-		if ( result == "" )
+		if ( result == "Everything alright!\n" )
 		{
 			trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/ok-hermes.png") );
 			status = tr("No dist-upgrade warnings.");
 		}
+		else if( result.contains("Prealert") or result.contains("PREALERT") )
+		{
+			trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/prealert.png") );
+			status = tr("There are dist-upgrade pre-alerts. Please visit sidux.com for more information!");
+		}
 		else
 		{
-			trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/notok-hermes.png") );
-			status = tr("There are dist-upgrade warnings. Please visit sidux.com for more information!");
+			trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/alert.png") );
+			status = tr("There are dist-upgrade alerts. Please visit sidux.com for more information!");
 		}
 	}
 
@@ -116,8 +121,8 @@ void SysTray::showKernel()
 {
 
 
-	QString currentKernel = readProcess("sidux-hermes", (QStringList() << "currentKernel") ).replace("\n", "");
-	QString newestKernel  = readProcess("sidux-hermes", (QStringList() << "newestKernel")  ).replace("\n", "");
+	QString currentKernel = readProcess("sidux-hermes", (QStringList() << "--current-kernel") ).replace("\n", "");
+	QString newestKernel  = readProcess("sidux-hermes", (QStringList() << "--newest-kernel")  ).replace("\n", "");
 
 	QString kernel;
 

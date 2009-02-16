@@ -64,7 +64,7 @@ void upgradablePackages::getPackages()
 
 	connect( process, SIGNAL(readyReadStandardOutput()),this, SLOT(readOutput()));
 	connect( process, SIGNAL(finished(int)),this, SLOT(displayPackages()));
-	process->start("sidux-hermes", (QStringList() << "getUpgradablePackages") );
+	process->start("sidux-hermes", (QStringList() << "--upgradable-packages") );
 }
 
 
@@ -117,7 +117,7 @@ void upgradablePackages::update()
 
 void upgradablePackages::download()
 {
-	runSAQ("download");;
+	runSAQ("download");
 
 }
 
@@ -130,6 +130,9 @@ void upgradablePackages::runSAQ(QString argument)
 
 	QProcess *saqProcess = new QProcess(this);
 	saqProcess->start(program, arguments);
+
+	if( argument == "update")
+		connect( saqProcess, SIGNAL(finished(int)),this, SLOT(getPackages()));
 }
 
 void upgradablePackages::closeEvent(QCloseEvent *event)

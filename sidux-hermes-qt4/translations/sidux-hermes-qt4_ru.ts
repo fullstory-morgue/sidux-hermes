@@ -27,7 +27,7 @@
     </message>
     <message>
         <source>No connection to sidux.com.</source>
-        <translation>Нет соединения с sidux.com.</translation>
+        <translation type="obsolete">Нет соединения с sidux.com.</translation>
     </message>
     <message>
         <source>No dist-upgrade warnings.</source>
@@ -35,7 +35,7 @@
     </message>
     <message>
         <source>There are dist-upgrade warnings. Please visit sidux.com for more information!</source>
-        <translation>Предупреждения по dist-upgrade. Пожалуйста, посетите sidux.com для получения большей информации!</translation>
+        <translation type="obsolete">Предупреждения по dist-upgrade. Пожалуйста, посетите sidux.com для получения большей информации!</translation>
     </message>
     <message>
         <source>Status</source>
@@ -88,6 +88,18 @@ repository. It gets the warnings from the sidux homepage.</source>
     </message>
     <message>
         <source>Upgradable packages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No connection to sidux.com!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There are dist-upgrade pre-alerts. Please visit sidux.com for more information!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There are dist-upgrade alerts. Please visit sidux.com for more information!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

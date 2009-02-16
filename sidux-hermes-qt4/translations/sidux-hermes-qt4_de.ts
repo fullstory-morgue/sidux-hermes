@@ -18,10 +18,6 @@
         <translation>Systemaktualisierung (Handbuch)</translation>
     </message>
     <message>
-        <source>No connection to sidux.com.</source>
-        <translation>Keine Verbindung zu sidux.com&quot;.</translation>
-    </message>
-    <message>
         <source>Status</source>
         <translation>Status</translation>
     </message>
@@ -37,10 +33,6 @@ repository. It gets the warnings from the sidux homepage.</source>
     <message>
         <source>About sidux-hermes</source>
         <translation>Über sidux-hermes</translation>
-    </message>
-    <message>
-        <source>There are dist-upgrade warnings. Please visit sidux.com for more information!</source>
-        <translation>Es gibt dist-upgrade-Warnungen. Bitte besuchen Sie sidux.com!</translation>
     </message>
     <message>
         <source>Forum - Upgrade Warnings</source>
@@ -89,6 +81,18 @@ repository. It gets the warnings from the sidux homepage.</source>
     <message>
         <source>Upgradable packages</source>
         <translation>Aktualisierbare Pakete</translation>
+    </message>
+    <message>
+        <source>No connection to sidux.com!</source>
+        <translation>Keine Verbindung zu sidux.com!</translation>
+    </message>
+    <message>
+        <source>There are dist-upgrade pre-alerts. Please visit sidux.com for more information!</source>
+        <translation>Es gibt dist-upgrade-Warnungen. Bitte besuchen Sie sidux.com!</translation>
+    </message>
+    <message>
+        <source>There are dist-upgrade alerts. Please visit sidux.com for more information!</source>
+        <translation>Es gibt dist-upgrade-Warnungen. Bitte besuchen Sie sidux.com!</translation>
     </message>
 </context>
 <context>

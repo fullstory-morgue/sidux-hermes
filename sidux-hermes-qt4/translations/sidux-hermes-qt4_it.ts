@@ -27,7 +27,7 @@
     </message>
     <message>
         <source>No connection to sidux.com.</source>
-        <translation>Impossibile connettersi a sidux.com.</translation>
+        <translation type="obsolete">Impossibile connettersi a sidux.com.</translation>
     </message>
     <message>
         <source>No dist-upgrade warnings.</source>
@@ -35,7 +35,7 @@
     </message>
     <message>
         <source>There are dist-upgrade warnings. Please visit sidux.com for more information!</source>
-        <translation>Ci sono allarmi per il dist-upgrade. Visitare sidux.com per maggiori informazioni!</translation>
+        <translation type="obsolete">Ci sono allarmi per il dist-upgrade. Visitare sidux.com per maggiori informazioni!</translation>
     </message>
     <message>
         <source>Status</source>
@@ -90,6 +90,18 @@ tiposchi@tiscali.it</translation>
     </message>
     <message>
         <source>Upgradable packages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No connection to sidux.com!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There are dist-upgrade pre-alerts. Please visit sidux.com for more information!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There are dist-upgrade alerts. Please visit sidux.com for more information!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

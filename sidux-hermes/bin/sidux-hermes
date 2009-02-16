@@ -8,19 +8,38 @@
 #--- sidux warnings & news ----------------------------------------------------#
 #------------------------------------------------------------------------------#
 
-function duWarnings()
+
+function sidStatus()
 {
 	TMP="$(mktemp -p /tmp/ du-warning-XXXXXXXXXX)"
 	wget -O $TMP -q -U "siduxcc-hermes" http://sidux.com/xBackends.php
 	tmp=`cat $TMP`
 	if [ -n "$tmp" ]; then 
-		egrep title $TMP | grep WARNING | cut -f2 -d"<" | cut -c7-
-		egrep title $TMP | grep Warning | cut -f2 -d"<" | cut -c7-
+		a=$( egrep title $TMP | grep ALERT | cut -f2 -d"<" | cut -c7- )
+		b=$( egrep title $TMP | grep Alert | cut -f2 -d"<" | cut -c7- )
+		c=$( egrep title $TMP | grep alert | cut -f2 -d"<" | cut -c7- )
+		s=0
+		if [ -n "$a" ]; then
+			echo $a
+			s=1
+		fi
+		if [ -n "$b" ]; then
+			egrep title $TMP | grep Alert | cut -f2 -d"<" | cut -c7-
+			s=1
+		fi
+		if [ -n "$c" ]; then
+			echo $c
+			s=1
+		fi
+		if [ $s == 0 ]; then
+			echo "Everything alright!"
+		fi
 	else
-		echo "disconnected"
+		echo "No connection to sidux.com!"
 	fi
 	rm -f $TMP
 }
+
 
 function duWarningsEn()
 {
@@ -77,10 +96,29 @@ function newestKernel()
 	wget -U "siduxcc-hermes" -O - http://sidux.com/debian/pool/main/l/linux-sidux-2.6/ 2>/dev/null | grep linux-image | grep $(kernelType) | tail -n 1 | cut -f8 -d\" | cut -f1 -d_ | cut -f3- -d-
 }
 
+#------------------------------------------------------------------------------#
+#--- upgradeable packages -----------------------------------------------------#
+#------------------------------------------------------------------------------#
 
-function getUpgradablePackages()
+function upgradablePackages()
 {
 	LANG=C apt-show-versions | grep upgradeable
+}
+
+
+#------------------------------------------------------------------------------#
+#--- help ---------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
+
+function usage()
+{
+        echo  "$(basename $0)"
+        echo  "     -s,  --status                show the status of the debian sid repository"
+        echo  "     -ck, --current-kernel        show the version of the current kernel"
+        echo  "     -nk, --newest-kernel         show the version of the newest available kernel"
+        echo  "     -up, --upgradable-packages   show the upgradable packages"
+        echo  "     -h,  --help                  show this usage"
+        exit 1
 }
 
 
@@ -88,13 +126,17 @@ function getUpgradablePackages()
 #--- start app ----------------------------------------------------------------#
 #------------------------------------------------------------------------------#
 
+
 case $1 in
-	"duWarnings"            ) duWarnings;;
-	"duWarningsEn"          ) duWarningsEn;;
-	"duWarningsDe"          ) duWarningsDe;;
-	"getNewsEn"             ) getNewsEn;;
-	"getNewsDe"             ) getNewsDe;;
-	"currentKernel"         ) currentKernel;;
-	"newestKernel"          ) newestKernel;;
-	"getUpgradablePackages" ) getUpgradablePackages;;
+	""                      ) sidStatus;;
+	"-s"                    ) sidStatus;;
+	"--status"              ) sidStatus;;
+	"-ck"                   ) currentKernel;;
+	"--current-kernel"      ) currentKernel;;
+	"-nk"                   ) newestKernel;;
+	"--newest-kernel"       ) newestKernel;;
+	"-up"                   ) upgradablePackages;;
+	"--upgradable-packages" ) upgradablePackages;;
+	"-h"                    ) usage;;
+	"--help"                ) usage;;
 esac
