@@ -17,7 +17,7 @@ Architecture: all
 Depends: ${misc:Depends},
          wget,
          apt-show-versions
-Description: sidux-hermes
+Description: upgrade sentinel for the cli
  Console program that shows the status of the Debian sid repository.
  .
  It gets the warnings from sidux.com.
@@ -29,7 +29,7 @@ Depends: ${misc:Depends},
          python,
          python-gtk2
 Conflicts: siduxcc-gtk2 (<= 0.12.12)
-Description: sidux-hermes-gtk2
+Description: upgrade sentinel for gtk2
  Gtk2 systray applet that shows the status of the Debian sid repository.
  .
  It gets the warnings from sidux.com.
@@ -40,7 +40,7 @@ Depends: ${misc:Depends},
          ${shlibs:Depends},
          sidux-hermes (= ${source:Version}),
          sidux-apt-qt4
-Description: sidux-hermes-qt4
+Description: upgrade sentinel for sidux-hermes-qt4
  Qt4 systray applet that shows the status of the Debian sid repository.
  .
  It gets the warnings from sidux.com.
