@@ -118,7 +118,7 @@ repository. It gets the warnings from the sidux homepage.</source>
 siduxcc-hermes. Use this option if 
 you have updated the package list 
 without siduxcc-hermes.</source>
-        <translation>Gleicht die oben stehende Liste mit
+        <translation type="obsolete">Gleicht die oben stehende Liste mit
 dem System ab. Dieser Befehl sollte
 dann durchgeführt, falls ein Update
 der Paketlisten ohne siduxcc-hermes
@@ -126,7 +126,7 @@ durchgeführt wurde.</translation>
     </message>
     <message>
         <source>relo&amp;ad</source>
-        <translation>neul&amp;aden</translation>
+        <translation type="obsolete">neul&amp;aden</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -144,7 +144,7 @@ Befehl: apt-get -d dist-upgrade</translation>
     </message>
     <message>
         <source>d&amp;ownload</source>
-        <translation>d&amp;ownload</translation>
+        <translation type="obsolete">d&amp;ownload</translation>
     </message>
     <message>
         <source>Alt+O</source>
@@ -165,7 +165,7 @@ Befehl: apt-get update</translation>
     </message>
     <message>
         <source>&amp;update </source>
-        <translation>&amp;update</translation>
+        <translation type="obsolete">&amp;update</translation>
     </message>
     <message>
         <source>Alt+U</source>
@@ -173,7 +173,7 @@ Befehl: apt-get update</translation>
     </message>
     <message>
         <source>upgrade</source>
-        <translation>upgrade</translation>
+        <translation type="obsolete">upgrade</translation>
     </message>
     <message>
         <source>&amp;close</source>
@@ -198,6 +198,18 @@ Modus verlassen werden. Hierzu CTR+ALT+F1
 drücken, sich als root einloggen und init 3 einge-
 ben. Danach den Befehl smxi oder siduxcc 
 (Software-&gt;Dist-upgrade) ausführen.</translation>
+    </message>
+    <message>
+        <source>d&amp;ownload packages</source>
+        <translation>Pakete herunterlad&amp;en</translation>
+    </message>
+    <message>
+        <source>upgrade packages</source>
+        <translation>Pakete aktualisieren</translation>
+    </message>
+    <message>
+        <source>&amp;update list</source>
+        <translation>Liste erne&amp;uern</translation>
     </message>
 </context>
 </TS>

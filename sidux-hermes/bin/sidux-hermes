@@ -24,7 +24,7 @@ function sidStatus()
 			s=1
 		fi
 		if [ -n "$b" ]; then
-			egrep title $TMP | grep Alert | cut -f2 -d"<" | cut -c7-
+			echo $b
 			s=1
 		fi
 		if [ -n "$c" ]; then

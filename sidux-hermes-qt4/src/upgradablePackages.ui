@@ -61,22 +61,6 @@
      </property>
     </spacer>
    </item>
-   <item row="4" column="1" >
-    <widget class="QPushButton" name="reloadPushButton" >
-     <property name="toolTip" >
-      <string>Reload the current package list of 
-siduxcc-hermes. Use this option if 
-you have updated the package list 
-without siduxcc-hermes.</string>
-     </property>
-     <property name="text" >
-      <string>relo&amp;ad</string>
-     </property>
-     <property name="shortcut" >
-      <string>Alt+A</string>
-     </property>
-    </widget>
-   </item>
    <item row="4" column="2" >
     <widget class="QPushButton" name="downloadPushButton" >
      <property name="enabled" >
@@ -98,28 +82,10 @@ unpacked or installed.
 Command: apt-get -d dist-upgrade</string>
      </property>
      <property name="text" >
-      <string>d&amp;ownload</string>
+      <string>d&amp;ownload packages</string>
      </property>
      <property name="shortcut" >
       <string>Alt+O</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="3" >
-    <widget class="QPushButton" name="updatePushButton" >
-     <property name="toolTip" >
-      <string>update is used to resynchronize the package 
-index files from their sources. The indexes 
-of available packages are fetched from the 
-location(s) specified in /etc/apt/sources.list.
-
-Command: apt-get update</string>
-     </property>
-     <property name="text" >
-      <string>&amp;update </string>
-     </property>
-     <property name="shortcut" >
-      <string>Alt+U</string>
      </property>
     </widget>
    </item>
@@ -133,7 +99,7 @@ run the command smxi or siduxcc (Software->
 Dist-upgrade).</string>
      </property>
      <property name="text" >
-      <string>upgrade</string>
+      <string>upgrade packages</string>
      </property>
      <property name="shortcut" >
       <string>Alt+A</string>
@@ -150,13 +116,29 @@ Dist-upgrade).</string>
      </property>
     </widget>
    </item>
+   <item row="4" column="1" >
+    <widget class="QPushButton" name="updatePushButton" >
+     <property name="toolTip" >
+      <string>update is used to resynchronize the package 
+index files from their sources. The indexes 
+of available packages are fetched from the 
+location(s) specified in /etc/apt/sources.list.
+
+Command: apt-get update</string>
+     </property>
+     <property name="text" >
+      <string>&amp;update list</string>
+     </property>
+     <property name="shortcut" >
+      <string>Alt+U</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="6" />
  <tabstops>
   <tabstop>treeWidget</tabstop>
-  <tabstop>reloadPushButton</tabstop>
-  <tabstop>updatePushButton</tabstop>
  </tabstops>
  <resources/>
  <connections>

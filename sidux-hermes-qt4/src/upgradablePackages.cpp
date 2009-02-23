@@ -25,7 +25,7 @@ upgradablePackages::upgradablePackages (QWidget* parent, Qt::WFlags flags): QWid
 {
 	setupUi(this);
 
-	connect(reloadPushButton, SIGNAL(clicked()), this, SLOT(getPackages()));
+// 	connect(reloadPushButton, SIGNAL(clicked()), this, SLOT(getPackages()));
 	connect(upgradePushButton, SIGNAL(clicked()), this, SLOT(upgrade()));
 	connect(updatePushButton, SIGNAL(clicked()), this, SLOT(update()));
 	connect(downloadPushButton, SIGNAL(clicked()), this, SLOT(download()));
@@ -51,7 +51,7 @@ void upgradablePackages::init()
 void upgradablePackages::getPackages()
 {
 
-	reloadPushButton->setEnabled(FALSE);
+// 	reloadPushButton->setEnabled(FALSE);
 	upgradePushButton->setEnabled(FALSE);
 	updatePushButton->setEnabled(FALSE);
 	downloadPushButton->setEnabled(FALSE);
@@ -93,7 +93,7 @@ void upgradablePackages::displayPackages()
 			item->setText( 2, tmpArray[3] );
 		}
 	}
-	reloadPushButton->setEnabled(TRUE);
+// 	reloadPushButton->setEnabled(TRUE);
 	upgradePushButton->setEnabled(TRUE);
 	closePushButton->setEnabled(TRUE);
 	updatePushButton->setEnabled(TRUE);

@@ -124,17 +124,6 @@ muchan.m@gmail.com</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Reload the current package list of 
-siduxcc-hermes. Use this option if 
-you have updated the package list 
-without siduxcc-hermes.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>relo&amp;ad</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Alt+A</source>
         <translation type="unfinished"></translation>
     </message>
@@ -143,10 +132,6 @@ without siduxcc-hermes.</source>
 unpacked or installed.
 
 Command: apt-get -d dist-upgrade</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>d&amp;ownload</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -163,15 +148,7 @@ Command: apt-get update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;update </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Alt+U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>upgrade</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -192,6 +169,18 @@ graphic modus. Press for this CTR+ALT+F1,
 login as root and type init 3. After that 
 run the command smxi or siduxcc (Software-&gt;
 Dist-upgrade).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>d&amp;ownload packages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>upgrade packages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;update list</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

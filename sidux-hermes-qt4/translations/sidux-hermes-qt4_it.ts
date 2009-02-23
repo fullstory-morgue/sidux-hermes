@@ -1,17 +1,18 @@
-<!DOCTYPE TS><TS>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS><TS version="1.1" language="it">
 <defaultcodec></defaultcodec>
 <context>
     <name>QObject</name>
     <message>
         <source>I couldn&apos;t detect any system tray on this system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Non ho potuto rilevare nessun Vassoio di sistema su questo sistema.</translation>
     </message>
 </context>
 <context>
     <name>SysTray</name>
     <message>
         <source>&amp;Close</source>
-        <translation>&amp;chiudi</translation>
+        <translation>&amp;Chiudi</translation>
     </message>
     <message>
         <source>Forum - Upgrade Warnings</source>
@@ -19,23 +20,15 @@
     </message>
     <message>
         <source>Manual - Upgrade of an Installed System</source>
-        <translation type="unfinished"></translation>
+        <translation>Manuale - Aggiornamento di un Sistema Installato</translation>
     </message>
     <message>
         <source>About sidux-hermes</source>
-        <translation>Informazioni su sidux</translation>
-    </message>
-    <message>
-        <source>No connection to sidux.com.</source>
-        <translation type="obsolete">Impossibile connettersi a sidux.com.</translation>
+        <translation>Informazioni su sidux-hermes</translation>
     </message>
     <message>
         <source>No dist-upgrade warnings.</source>
-        <translation>on ci sono allarmi per il dist-upgrade.</translation>
-    </message>
-    <message>
-        <source>There are dist-upgrade warnings. Please visit sidux.com for more information!</source>
-        <translation type="obsolete">Ci sono allarmi per il dist-upgrade. Visitare sidux.com per maggiori informazioni!</translation>
+        <translation>Non ci sono allarmi per il dist-upgrade.</translation>
     </message>
     <message>
         <source>Status</source>
@@ -44,114 +37,106 @@
     <message>
         <source>This programm warns you if there a problems in the Debian sid
 repository. It gets the warnings from the sidux homepage.</source>
-        <translation type="unfinished"></translation>
+        <translation>Questo programma ti avverte se ci sono problemi con i pacchetti
+nel repository Debian Sid.
+Preleva gli allarmi dalla homepage di sidux.</translation>
     </message>
     <message>
         <source>Programmer</source>
-        <translation type="unfinished"></translation>
+        <translation>Programmatore</translation>
     </message>
     <message>
         <source>Translator</source>
-        <translation type="unfinished"></translation>
+        <translation>Traduttori</translation>
     </message>
     <message>
         <source>NAME OF TRANSLATORS</source>
-        <translation>Renato &apos;zenren&apos; Zanotti
+        <translation>Maurizio &apos;pinguin&apos; Fabbri
+Renato &apos;zenren&apos; Zanotti
 Salvo &apos;LtWorf&apos; Tomaselli</translation>
     </message>
     <message>
         <source>EMAIL OF TRANSLATORS</source>
-        <translation>zenren@tiscali.it
+        <translation>mrzfbb@alice.it
+zenren@tiscali.it
 tiposchi@tiscali.it</translation>
     </message>
     <message>
         <source>LANGUAGE OF TRANSLATION</source>
-        <translation>Italian</translation>
+        <translation>Italiano</translation>
     </message>
     <message>
         <source>Licence</source>
-        <translation type="unfinished"></translation>
+        <translation>Licenza</translation>
     </message>
     <message>
         <source>Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Icone</translation>
     </message>
     <message>
         <source>Kernel informations</source>
-        <translation type="unfinished"></translation>
+        <translation>Informazioni sui Kernel</translation>
     </message>
     <message>
         <source>Current kernel</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione installata</translation>
     </message>
     <message>
         <source>Newest  kernel</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione aggiornata</translation>
     </message>
     <message>
         <source>Upgradable packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacchetti aggiornabili</translation>
     </message>
     <message>
         <source>No connection to sidux.com!</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile connettersi a sidux.com!</translation>
     </message>
     <message>
         <source>There are dist-upgrade pre-alerts. Please visit sidux.com for more information!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ci sono pre-allarmi per il dist-upgrade. Visitare sidux.com per maggiori informazioni!</translation>
     </message>
     <message>
         <source>There are dist-upgrade alerts. Please visit sidux.com for more information!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ci sono allarmi per il dist-upgrade. Visitare sidux.com per maggiori informazioni!</translation>
     </message>
 </context>
 <context>
     <name>upgradablePackages</name>
     <message>
         <source>Upgradable Packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Pacchetti aggiornabili</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <source>Installed Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione installata</translation>
     </message>
     <message>
         <source>Latest Version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reload the current package list of 
-siduxcc-hermes. Use this option if 
-you have updated the package list 
-without siduxcc-hermes.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>relo&amp;ad</source>
-        <translation type="unfinished"></translation>
+        <translation>Ultima versione</translation>
     </message>
     <message>
         <source>Alt+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+A</translation>
     </message>
     <message>
         <source>package files are only retrieved, not
 unpacked or installed.
 
 Command: apt-get -d dist-upgrade</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>d&amp;ownload</source>
-        <translation type="unfinished"></translation>
+        <translation>I pacchetti vengono solo scaricati,
+non decompressi o installati.
+
+Comando: apt-get -d dist-upgrade</translation>
     </message>
     <message>
         <source>Alt+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+O</translation>
     </message>
     <message>
         <source>update is used to resynchronize the package 
@@ -160,31 +145,29 @@ of available packages are fetched from the
 location(s) specified in /etc/apt/sources.list.
 
 Command: apt-get update</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;update </source>
-        <translation type="unfinished"></translation>
+        <translation>aggiorna è usato per sincronizzare gli indici dei
+pacchetti con le loro fonti. Gli indici dei pacchetti
+disponibili sono scaricati dai siti indicati nei files
+presenti nella cartella /etc/apt/sources.list.d o 
+nel file /etc/apt/sources.list.
+
+Comando: apt-get update</translation>
     </message>
     <message>
         <source>Alt+U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+U</translation>
     </message>
     <message>
         <source>&amp;close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;chiudi</translation>
     </message>
     <message>
         <source>Alt+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+C</translation>
     </message>
     <message>
         <source>Plase wait</source>
-        <translation type="unfinished"></translation>
+        <translation>Attendere, prego</translation>
     </message>
     <message>
         <source>To update your system you have to leave the 
@@ -192,7 +175,23 @@ graphic modus. Press for this CTR+ALT+F1,
 login as root and type init 3. After that 
 run the command smxi or siduxcc (Software-&gt;
 Dist-upgrade).</source>
-        <translation type="unfinished"></translation>
+        <translation>Per aggiornare il sistema devi lasciare la modalità
+grafica. Per far questo, premi CTR+ALT+F1, login
+come &quot;root&quot; e comando &quot;init 3&quot;. Quindi esegui
+il programma &quot;smxi&quot; o &quot;siduxcc&quot; (Software-&gt;
+Dist-upgrade).</translation>
+    </message>
+    <message>
+        <source>d&amp;ownload packages</source>
+        <translation>&amp;scarica pacchetti</translation>
+    </message>
+    <message>
+        <source>upgrade packages</source>
+        <translation>aggiorna pacchetti</translation>
+    </message>
+    <message>
+        <source>&amp;update list</source>
+        <translation>&amp;aggiorna lista</translation>
     </message>
 </context>
 </TS>
