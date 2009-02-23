@@ -154,10 +154,6 @@ Command: apt-get update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Plase wait</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>To update your system you have to leave the 
 graphic modus. Press for this CTR+ALT+F1, 
 login as root and type init 3. After that 
@@ -175,6 +171,10 @@ Dist-upgrade).</source>
     </message>
     <message>
         <source>&amp;update list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please wait</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -114,21 +114,6 @@ repository. It gets the warnings from the sidux homepage.</source>
         <translation>Neuste Version</translation>
     </message>
     <message>
-        <source>Reload the current package list of 
-siduxcc-hermes. Use this option if 
-you have updated the package list 
-without siduxcc-hermes.</source>
-        <translation type="obsolete">Gleicht die oben stehende Liste mit
-dem System ab. Dieser Befehl sollte
-dann durchgeführt, falls ein Update
-der Paketlisten ohne siduxcc-hermes
-durchgeführt wurde.</translation>
-    </message>
-    <message>
-        <source>relo&amp;ad</source>
-        <translation type="obsolete">neul&amp;aden</translation>
-    </message>
-    <message>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
@@ -141,10 +126,6 @@ Command: apt-get -d dist-upgrade</source>
 herunter, ohne diese zu installieren.
 
 Befehl: apt-get -d dist-upgrade</translation>
-    </message>
-    <message>
-        <source>d&amp;ownload</source>
-        <translation type="obsolete">d&amp;ownload</translation>
     </message>
     <message>
         <source>Alt+O</source>
@@ -164,16 +145,8 @@ Serverlisten aus dem Internet.
 Befehl: apt-get update</translation>
     </message>
     <message>
-        <source>&amp;update </source>
-        <translation type="obsolete">&amp;update</translation>
-    </message>
-    <message>
         <source>Alt+U</source>
         <translation>Alt+U</translation>
-    </message>
-    <message>
-        <source>upgrade</source>
-        <translation type="obsolete">upgrade</translation>
     </message>
     <message>
         <source>&amp;close</source>
@@ -182,10 +155,6 @@ Befehl: apt-get update</translation>
     <message>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
-    </message>
-    <message>
-        <source>Plase wait</source>
-        <translation>Bitte warten</translation>
     </message>
     <message>
         <source>To update your system you have to leave the 
@@ -210,6 +179,10 @@ ben. Danach den Befehl smxi oder siduxcc
     <message>
         <source>&amp;update list</source>
         <translation>Liste erne&amp;uern</translation>
+    </message>
+    <message>
+        <source>Please wait</source>
+        <translation>Bitte warten</translation>
     </message>
 </context>
 </TS>

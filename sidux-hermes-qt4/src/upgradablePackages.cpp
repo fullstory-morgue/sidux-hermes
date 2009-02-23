@@ -60,7 +60,7 @@ void upgradablePackages::getPackages()
 	packages.clear();
 
 	QTreeWidgetItem *item = new QTreeWidgetItem( treeWidget, 0 );
-	item->setText( 0,tr("Plase wait") );
+	item->setText( 0,tr("Please wait") );
 
 	connect( process, SIGNAL(readyReadStandardOutput()),this, SLOT(readOutput()));
 	connect( process, SIGNAL(finished(int)),this, SLOT(displayPackages()));

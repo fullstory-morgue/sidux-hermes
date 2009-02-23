@@ -166,10 +166,6 @@ Comando: apt-get update</translation>
         <translation>Alt+C</translation>
     </message>
     <message>
-        <source>Plase wait</source>
-        <translation>Attendere, prego</translation>
-    </message>
-    <message>
         <source>To update your system you have to leave the 
 graphic modus. Press for this CTR+ALT+F1, 
 login as root and type init 3. After that 
@@ -192,6 +188,10 @@ Dist-upgrade).</translation>
     <message>
         <source>&amp;update list</source>
         <translation>&amp;aggiorna lista</translation>
+    </message>
+    <message>
+        <source>Please wait</source>
+        <translation>Attendere, prego</translation>
     </message>
 </context>
 </TS>
