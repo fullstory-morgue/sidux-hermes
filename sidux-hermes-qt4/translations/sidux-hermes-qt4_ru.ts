@@ -42,7 +42,7 @@
         <translation>Статус</translation>
     </message>
     <message>
-        <source>This programm warns you if there a problems in the Debian sid
+        <source>This program warns you, if there are problems in the Debian sid
 repository. It gets the warnings from the sidux homepage.</source>
         <translation type="unfinished"></translation>
     </message>

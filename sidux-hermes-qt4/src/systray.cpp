@@ -136,7 +136,7 @@ void SysTray::showAbout()
 {
 
 	QString about; 
-	about += "\n"+tr("This programm warns you if there a problems in the Debian sid\nrepository. It gets the warnings from the sidux homepage.")+"\n\n" ; 
+	about += "\n"+tr("This program warns you, if there are problems in the Debian sid\nrepository. It gets the warnings from the sidux homepage.")+"\n\n" ; 
 
 	about += tr("Programmer")+":\n";
 	about += QString::fromUtf8("Fabian Würtz")+" <xadras@sidux.com>\n\n";

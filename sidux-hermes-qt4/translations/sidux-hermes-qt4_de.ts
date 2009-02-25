@@ -22,7 +22,7 @@
         <translation>Status</translation>
     </message>
     <message>
-        <source>This programm warns you if there a problems in the Debian sid
+        <source>This program warns you, if there are problems in the Debian sid
 repository. It gets the warnings from the sidux homepage.</source>
         <translation>Dieses Programm warnt Sie wenn es Probleme im Debian-Sid-Repository gib. Es bezieht die Warnungen von der sidux-Homepage.</translation>
     </message>
