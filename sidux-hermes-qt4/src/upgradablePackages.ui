@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>upgradablePackages</class>
- <widget class="QWidget" name="upgradablePackages" >
-  <property name="geometry" >
+ <widget class="QWidget" name="upgradablePackages">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,51 +10,51 @@
     <height>412</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Upgradable Packages</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout" >
-   <item row="0" column="0" colspan="7" >
-    <widget class="QTreeWidget" name="treeWidget" >
-     <property name="rootIsDecorated" >
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="7">
+    <widget class="QTreeWidget" name="treeWidget">
+     <property name="rootIsDecorated">
       <bool>false</bool>
      </property>
      <column>
-      <property name="text" >
+      <property name="text">
        <string>Name</string>
       </property>
      </column>
      <column>
-      <property name="text" >
+      <property name="text">
        <string>Installed Version</string>
       </property>
      </column>
      <column>
-      <property name="text" >
+      <property name="text">
        <string>Latest Version</string>
       </property>
      </column>
     </widget>
    </item>
-   <item row="1" column="0" colspan="7" >
-    <widget class="Line" name="line1" >
-     <property name="frameShape" >
+   <item row="1" column="0" colspan="7">
+    <widget class="Line" name="line1">
+     <property name="frameShape">
       <enum>QFrame::HLine</enum>
      </property>
-     <property name="frameShadow" >
+     <property name="frameShadow">
       <enum>QFrame::Sunken</enum>
      </property>
     </widget>
    </item>
-   <item row="4" column="0" >
-    <spacer name="spacer9" >
-     <property name="orientation" >
+   <item row="4" column="0">
+    <spacer name="spacer9">
+     <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <property name="sizeType" >
+     <property name="sizeType">
       <enum>QSizePolicy::Expanding</enum>
      </property>
-     <property name="sizeHint" stdset="0" >
+     <property name="sizeHint" stdset="0">
       <size>
        <width>219</width>
        <height>20</height>
@@ -61,82 +62,83 @@
      </property>
     </spacer>
    </item>
-   <item row="4" column="2" >
-    <widget class="QPushButton" name="downloadPushButton" >
-     <property name="enabled" >
+   <item row="4" column="2">
+    <widget class="QPushButton" name="downloadPushButton">
+     <property name="enabled">
       <bool>true</bool>
      </property>
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
-     <property name="font" >
+     <property name="font">
       <font/>
      </property>
-     <property name="toolTip" >
+     <property name="toolTip">
       <string>package files are only retrieved, not
 unpacked or installed.
 
 Command: apt-get -d dist-upgrade</string>
      </property>
-     <property name="text" >
+     <property name="text">
       <string>d&amp;ownload packages</string>
      </property>
-     <property name="shortcut" >
+     <property name="shortcut">
       <string>Alt+O</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="4" >
-    <widget class="QPushButton" name="upgradePushButton" >
-     <property name="toolTip" >
+   <item row="4" column="4">
+    <widget class="QPushButton" name="upgradePushButton">
+     <property name="toolTip">
       <string>To update your system you have to leave the 
 graphic modus. Press for this CTR+ALT+F1, 
 login as root and type init 3. After that 
-run the command smxi or siduxcc (Software->
+run the command smxi or siduxcc (Software-&gt;
 Dist-upgrade).</string>
      </property>
-     <property name="text" >
+     <property name="text">
       <string>upgrade packages</string>
      </property>
-     <property name="shortcut" >
+     <property name="shortcut">
       <string>Alt+A</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="5" >
-    <widget class="QPushButton" name="closePushButton" >
-     <property name="text" >
+   <item row="4" column="5">
+    <widget class="QPushButton" name="closePushButton">
+     <property name="text">
       <string>&amp;close</string>
      </property>
-     <property name="shortcut" >
+     <property name="shortcut">
       <string>Alt+C</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="1" >
-    <widget class="QPushButton" name="updatePushButton" >
-     <property name="toolTip" >
+   <item row="4" column="1">
+    <widget class="QPushButton" name="updatePushButton">
+     <property name="toolTip">
       <string>update is used to resynchronize the package 
 index files from their sources. The indexes 
 of available packages are fetched from the 
-location(s) specified in /etc/apt/sources.list.
+location(s) specified in &quot;*.list&quot; configurations files contained into
+the folder /etc/apt/sources.list.d/.
 
 Command: apt-get update</string>
      </property>
-     <property name="text" >
+     <property name="text">
       <string>&amp;update list</string>
      </property>
-     <property name="shortcut" >
+     <property name="shortcut">
       <string>Alt+U</string>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
- <layoutdefault spacing="6" margin="6" />
+ <layoutdefault spacing="6" margin="6"/>
  <tabstops>
   <tabstop>treeWidget</tabstop>
  </tabstops>
@@ -148,11 +150,11 @@ Command: apt-get update</string>
    <receiver>upgradablePackages</receiver>
    <slot>close()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>546</x>
      <y>351</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>296</x>
      <y>186</y>
     </hint>

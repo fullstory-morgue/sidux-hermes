@@ -13,6 +13,10 @@ DESTDIR = .
 SOURCES += src/main.cpp \
  src/systray.cpp \
  src/upgradablePackages.cpp
+HEADERS += src/systray.h \
+ src/upgradablePackages.h
+TARGET = sidux-hermes-qt4
+FORMS += src/upgradablePackages.ui
 
 TRANSLATIONS = translations/sidux-hermes-qt4_da.ts \
  translations/sidux-hermes-qt4_de.ts \
@@ -28,7 +32,6 @@ TRANSLATIONS = translations/sidux-hermes-qt4_da.ts \
  translations/sidux-hermes-qt4_ro.ts \
  translations/sidux-hermes-qt4_ru.ts
 
-
 target.path = /usr/bin
 shortcuttarget.path = /usr/share/
 shortcuttarget.files = applications
@@ -36,9 +39,3 @@ langtarget.path = /usr/share/sidux-hermes/translations/
 langtarget.files = translations/*.qm
 
 INSTALLS += target shortcuttarget langtarget
-
-HEADERS += src/systray.h \
- src/upgradablePackages.h
-TARGET = sidux-hermes-qt4
-
-FORMS += src/upgradablePackages.ui

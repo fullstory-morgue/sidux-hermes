@@ -1,4 +1,6 @@
-<!DOCTYPE TS><TS>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="de_DE" sourcelanguage="en_US">
 <defaultcodec></defaultcodec>
 <context>
     <name>QObject</name>
@@ -94,6 +96,10 @@ repository. It gets the warnings from the sidux homepage.</source>
         <source>There are dist-upgrade alerts. Please visit sidux.com for more information!</source>
         <translation>Es gibt dist-upgrade-Warnungen. Bitte besuchen Sie sidux.com!</translation>
     </message>
+    <message>
+        <source>Version</source>
+        <translation>Version</translation>
+    </message>
 </context>
 <context>
     <name>upgradablePackages</name>
@@ -130,19 +136,6 @@ Befehl: apt-get -d dist-upgrade</translation>
     <message>
         <source>Alt+O</source>
         <translation>Alt+O</translation>
-    </message>
-    <message>
-        <source>update is used to resynchronize the package 
-index files from their sources. The indexes 
-of available packages are fetched from the 
-location(s) specified in /etc/apt/sources.list.
-
-Command: apt-get update</source>
-        <translation>synchronisiert die Übersicht der
-verfügbaren  Pakete mit den
-Serverlisten aus dem Internet.
-
-Befehl: apt-get update</translation>
     </message>
     <message>
         <source>Alt+U</source>
@@ -183,6 +176,20 @@ ben. Danach den Befehl smxi oder siduxcc
     <message>
         <source>Please wait</source>
         <translation>Bitte warten</translation>
+    </message>
+    <message>
+        <source>update is used to resynchronize the package 
+index files from their sources. The indexes 
+of available packages are fetched from the 
+location(s) specified in &quot;*.list&quot; configurations files contained into
+the folder /etc/apt/sources.list.d/.
+
+Command: apt-get update</source>
+        <translation>synchronisiert die Übersicht der
+verfügbaren  Pakete mit den
+Serverlisten aus dem Internet.
+
+Befehl: apt-get update</translation>
     </message>
 </context>
 </TS>

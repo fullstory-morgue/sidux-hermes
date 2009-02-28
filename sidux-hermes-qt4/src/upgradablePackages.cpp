@@ -118,7 +118,6 @@ void upgradablePackages::update()
 void upgradablePackages::download()
 {
 	runSAQ("download");
-
 }
 
 void upgradablePackages::runSAQ(QString argument)

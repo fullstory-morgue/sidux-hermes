@@ -139,7 +139,7 @@ void SysTray::showAbout()
 	about += "\n"+tr("This program warns you, if there are problems in the Debian sid\nrepository. It gets the warnings from the sidux homepage.")+"\n\n" ; 
 
 	about += tr("Programmer")+":\n";
-	about += QString::fromUtf8("Fabian Würtz")+" <xadras@sidux.com>\n\n";
+	about += QString::fromUtf8("Fabian Würtz")+" <xadras@sidux.com>\n";
 
 	QString language = tr("LANGUAGE OF TRANSLATION");
 	QStringList translators = tr("NAME OF TRANSLATORS").split("\n");
@@ -159,7 +159,10 @@ void SysTray::showAbout()
 	about += "\n"+tr("Icons")+":\n";
 	about += QString::fromUtf8("Bernard Gray")+" <bernard.gray@gmail.com>\n\n";
 
-	about += tr("Licence") +": GPL" ;
+	about += tr("Licence") +": GPL" +"\n";
+
+	QString version = readProcess("sidux-hermes", (QStringList() << "-v") );
+	about += tr("Version") +": "+version ;
 
 
 	trayIcon->showMessage ( tr("About sidux-hermes"), about, QSystemTrayIcon::Information, 20000 );

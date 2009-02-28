@@ -103,6 +103,10 @@ Richard</translation>
         <source>There are dist-upgrade alerts. Please visit sidux.com for more information!</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>upgradablePackages</name>
@@ -135,15 +139,6 @@ Command: apt-get -d dist-upgrade</source>
     </message>
     <message>
         <source>Alt+O</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>update is used to resynchronize the package 
-index files from their sources. The indexes 
-of available packages are fetched from the 
-location(s) specified in /etc/apt/sources.list.
-
-Command: apt-get update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -180,6 +175,16 @@ Dist-upgrade).</source>
     </message>
     <message>
         <source>Please wait</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>update is used to resynchronize the package 
+index files from their sources. The indexes 
+of available packages are fetched from the 
+location(s) specified in &quot;*.list&quot; configurations files contained into
+the folder /etc/apt/sources.list.d/.
+
+Command: apt-get update</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

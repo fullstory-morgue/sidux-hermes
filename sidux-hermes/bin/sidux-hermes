@@ -117,9 +117,20 @@ function usage()
         echo  "     -ck, --current-kernel        show the version of the current kernel"
         echo  "     -nk, --newest-kernel         show the version of the newest available kernel"
         echo  "     -up, --upgradable-packages   show the upgradable packages"
-        echo  "     -h,  --help                  show this usage"
+        echo  "     -v,  --version               show a short usage summary."
+        echo  "     -h,  --help                  show the program version."
         exit 1
 }
+
+#------------------------------------------------------------------------------#
+#--- version ------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
+
+function version()
+{
+        dpkg --print-avail sidux-hermes | grep Version | cut -d" " -f2
+}
+
 
 
 #------------------------------------------------------------------------------#
@@ -139,4 +150,6 @@ case $1 in
 	"--upgradable-packages" ) upgradablePackages;;
 	"-h"                    ) usage;;
 	"--help"                ) usage;;
+	"-v"                    ) version;;
+	"--version"             ) version;;
 esac

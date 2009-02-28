@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="it">
+<!DOCTYPE TS><TS>
 <defaultcodec></defaultcodec>
 <context>
     <name>QObject</name>
@@ -101,6 +100,10 @@ tiposchi@tiscali.it</translation>
         <source>There are dist-upgrade alerts. Please visit sidux.com for more information!</source>
         <translation>Ci sono allarmi per il dist-upgrade. Visitare sidux.com per maggiori informazioni!</translation>
     </message>
+    <message>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>upgradablePackages</name>
@@ -145,7 +148,7 @@ of available packages are fetched from the
 location(s) specified in /etc/apt/sources.list.
 
 Command: apt-get update</source>
-        <translation>aggiorna è usato per sincronizzare gli indici dei
+        <translation type="obsolete">aggiorna è usato per sincronizzare gli indici dei
 pacchetti con le loro fonti. Gli indici dei pacchetti
 disponibili sono scaricati dai siti indicati nei files
 presenti nella cartella /etc/apt/sources.list.d o 
@@ -192,6 +195,16 @@ Dist-upgrade).</translation>
     <message>
         <source>Please wait</source>
         <translation>Attendere, prego</translation>
+    </message>
+    <message>
+        <source>update is used to resynchronize the package 
+index files from their sources. The indexes 
+of available packages are fetched from the 
+location(s) specified in &quot;*.list&quot; configurations files contained into
+the folder /etc/apt/sources.list.d/.
+
+Command: apt-get update</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
