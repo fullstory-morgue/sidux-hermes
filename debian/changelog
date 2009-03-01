@@ -1,10 +1,6 @@
-sidux-hermes (0.1.6) UNRELEASED; urgency=low
+sidux-hermes (0.1.6) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
-  * qt4: version number to about added. 
+  * qt4: version number added to about.
 
  -- Fabian Wuertz <xadras@sidux.com>  Sat, 28 Feb 2009 14:42:21 +0100
 
