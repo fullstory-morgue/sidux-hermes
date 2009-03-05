@@ -1,8 +1,12 @@
 sidux-hermes (0.1.7) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 01 Mar 2009 05:33:21 +0100
+  [ Fabian Wuertz ]
+  * qt4: status message fixed.
+
+ -- Fabian Wuertz <xadras@sidux.com>  Thu, 05 Mar 2009 16:08:42 +0100
 
 sidux-hermes (0.1.6) unstable; urgency=low
 

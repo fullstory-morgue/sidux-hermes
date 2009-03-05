@@ -83,7 +83,7 @@ void SysTray::updateIcon()
 		}
 	}
 
-	trayIcon->setToolTip( result );
+	trayIcon->setToolTip( status );
 	
 	QTimer::singleShot(1800000, this, SLOT(updateIcon()));
 	
