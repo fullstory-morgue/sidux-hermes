@@ -1,9 +1,5 @@
-sidux-hermes (0.1.7) UNRELEASED; urgency=low
+sidux-hermes (0.1.7) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * qt4: status message fixed.
 
  -- Fabian Wuertz <xadras@sidux.com>  Thu, 05 Mar 2009 16:08:42 +0100
