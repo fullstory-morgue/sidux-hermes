@@ -1,8 +1,12 @@
 sidux-hermes (0.1.8) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 08 Mar 2009 03:12:04 +0100
+  [ Fabian Wuertz ]
+  * Italian translation updated. Thanks to pinguin. 
+
+ -- Fabian Wuertz <xadras@sidux.com>  Tue, 10 Mar 2009 14:09:47 +0100
 
 sidux-hermes (0.1.7) unstable; urgency=low
 

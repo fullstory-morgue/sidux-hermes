@@ -102,7 +102,7 @@ tiposchi@tiscali.it</translation>
     </message>
     <message>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione</translation>
     </message>
 </context>
 <context>
@@ -140,21 +140,6 @@ Comando: apt-get -d dist-upgrade</translation>
     <message>
         <source>Alt+O</source>
         <translation>Alt+O</translation>
-    </message>
-    <message>
-        <source>update is used to resynchronize the package 
-index files from their sources. The indexes 
-of available packages are fetched from the 
-location(s) specified in /etc/apt/sources.list.
-
-Command: apt-get update</source>
-        <translation type="obsolete">aggiorna è usato per sincronizzare gli indici dei
-pacchetti con le loro fonti. Gli indici dei pacchetti
-disponibili sono scaricati dai siti indicati nei files
-presenti nella cartella /etc/apt/sources.list.d o 
-nel file /etc/apt/sources.list.
-
-Comando: apt-get update</translation>
     </message>
     <message>
         <source>Alt+U</source>
@@ -204,7 +189,12 @@ location(s) specified in &quot;*.list&quot; configurations files contained into
 the folder /etc/apt/sources.list.d/.
 
 Command: apt-get update</source>
-        <translation type="unfinished"></translation>
+        <translation>aggiorna è usato per sincronizzare gli indici dei
+pacchetti con le loro fonti. Gli indici dei pacchetti
+disponibili sono scaricati dai siti indicati nei file
+&quot;*.list&quot; presenti nella cartella /etc/apt/sources.list.d
+(o nel file /etc/apt/sources.list - non usato in sidux).
+Comando: apt-get update</translation>
     </message>
 </context>
 </TS>
