@@ -1,15 +1,13 @@
-sidux-hermes (0.1.9+nmu1) UNRELEASED; urgency=low
+sidux-hermes (0.1.9) unstable; urgency=low
 
-  * Non-maintainer upload.
+  [ Joaquim Boura ]
   * updated greek language file (thks edhunter)
 
- -- Joaquim Boura <x-un-i@sidux.com>  Tue, 28 Apr 2009 20:42:05 +0200
+  [ Stefan Lippers-Hollmann ]
+  * add x-un-i to uploaders.
+  * bump policy version to 3.8.1, no changes necessary.
 
-sidux-hermes (0.1.9) UNRELEASED; urgency=low
-
-  * NOT RELEASED YET
-
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 16 Mar 2009 01:12:39 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 29 Apr 2009 01:26:32 +0200
 
 sidux-hermes (0.1.8) unstable; urgency=low
 
