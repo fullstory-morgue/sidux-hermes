@@ -1,3 +1,9 @@
+sidux-hermes (0.1.11) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 03 Aug 2009 14:14:22 +0200
+
 sidux-hermes (0.1.10) unstable; urgency=low
 
   * fix news RSS URL for hermes.
