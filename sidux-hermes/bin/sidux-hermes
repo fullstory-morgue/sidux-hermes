@@ -12,7 +12,7 @@
 function sidStatus()
 {
 	TMP="$(mktemp -p /tmp/ du-warning-XXXXXXXXXX)"
-	wget -O $TMP -q -U "siduxcc-hermes" http://sidux.com/xBackends.php
+	wget -O $TMP -q -U "siduxcc-hermes" http://sidux.com/backend.php
 	tmp=`cat $TMP`
 	if [ -n "$tmp" ]; then 
 		a=$( egrep title $TMP | grep ALERT | cut -f2 -d"<" | cut -c7- )
