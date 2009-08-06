@@ -69,7 +69,8 @@ void SysTray::fetchFeed()
 {
 	xml.clear();
 	warningsGui.label->clear();
-	QUrl url("http://www.sidux.com/module-News-view-prop-Topic-cat-10006-theme-rss.html");
+	//QUrl url("http://www.sidux.com/module-News-view-prop-Topic-cat-10006-theme-rss.html");
+	QUrl url("http://localhost/feed.rss");
 	http.setHost(url.host());
 	http.get(url.path());
 
@@ -99,6 +100,7 @@ void SysTray::readFeed(const QHttpResponseHeader &resp)
  
 void SysTray::parseXml()
 {
+	bool redAlert = false;
 	while (!xml.atEnd()) {
 		xml.readNext();
 		if (xml.isStartElement()) {
@@ -112,8 +114,11 @@ void SysTray::parseXml()
 				title.clear(); description.clear();
 			}
 		} else if (xml.isCharacters() && !xml.isWhitespace()) {
-			if (currentTag == "title")
+			if (currentTag == "title") {
 				title = "<b>"+xml.text().toString() + "</b><br><br>";
+				if( title.contains("Alert") or title.contains("ALERT"))
+					redAlert = true;
+			}
 			else if (currentTag == "description")
 				description = xml.text().toString();
 		}
@@ -130,7 +135,10 @@ void SysTray::parseXml()
 	}
 	else
 	{
-		trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/alert.png") );
+		if( redAlert) 
+			trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/alert.png") );
+		else
+			trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/prealert.png") );
 		status = tr("There are dist-upgrade alerts. Please visit sidux.com for more information!");
 	}
 	

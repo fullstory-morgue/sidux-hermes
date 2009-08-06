@@ -8,8 +8,9 @@ sidux-hermes (0.1.11) UNRELEASED; urgency=low
   * qt4: Cli dependency removed
   * qt4: Show warnings improved   
   * debian: Description updated
+  * qt4: RedAlerts added
 
- -- Fabian Wuertz <xadras@sidux.com>  Thu, 06 Aug 2009 15:19:56 +0200
+ -- Fabian Wuertz <xadras@sidux.com>  Thu, 06 Aug 2009 15:52:38 +0200
 
 sidux-hermes (0.1.10) unstable; urgency=low
 
