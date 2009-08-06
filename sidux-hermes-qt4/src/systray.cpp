@@ -69,8 +69,7 @@ void SysTray::fetchFeed()
 {
 	xml.clear();
 	warningsGui.label->clear();
-	//QUrl url("http://www.sidux.com/module-News-view-prop-Topic-cat-10006-theme-rss.html");
-	QUrl url("http://localhost/feed.rss");
+	QUrl url("http://www.sidux.com/module-News-view-prop-Topic-cat-10006-theme-rss.html");
 	http.setHost(url.host());
 	http.get(url.path());
 

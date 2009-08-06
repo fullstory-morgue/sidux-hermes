@@ -12,26 +12,16 @@
 function sidStatus()
 {
 	TMP="$(mktemp -p /tmp/ du-warning-XXXXXXXXXX)"
-	wget -O $TMP -q -U "siduxcc-hermes" http://sidux.com/backend.php
+	wget -O $TMP -q -U "siduxcc-hermes" http://www.sidux.com/module-News-view-prop-Topic-cat-10006-theme-rss.html
+
+
 	tmp=`cat $TMP`
 	if [ -n "$tmp" ]; then 
-		a=$( egrep title $TMP | grep ALERT | cut -f2 -d"<" | cut -c7- )
-		b=$( egrep title $TMP | grep Alert | cut -f2 -d"<" | cut -c7- )
-		c=$( egrep title $TMP | grep alert | cut -f2 -d"<" | cut -c7- )
-		s=0
+		a=$( egrep "<title" $TMP | cut -f2 -d"<" | cut -c7- | tail -n +3 )
+		
 		if [ -n "$a" ]; then
-			echo $a
-			s=1
-		fi
-		if [ -n "$b" ]; then
-			echo $b
-			s=1
-		fi
-		if [ -n "$c" ]; then
-			echo $c
-			s=1
-		fi
-		if [ $s == 0 ]; then
+			egrep "<title" $TMP | cut -f2 -d"<" | cut -c7- | tail -n +3
+		else
 			echo "Everything alright!"
 		fi
 	else
@@ -40,38 +30,6 @@ function sidStatus()
 	rm -f $TMP
 }
 
-
-function duWarningsEn()
-{
-	TMP="$(mktemp -p /tmp/ du-warning-XXXXXXXXXX)"
-	wget -O $TMP -q -U "siduxcc-hermes" http://sidux.com/backend.php
-	grep -A 1 Warning $TMP
-	rm -f $TMP
-}
-
-function duWarningsDe()
-{
-	TMP="$(mktemp -p /tmp/ du-warning-XXXXXXXXXX)"
-	wget -O $TMP -q -U "siduxcc-hermes" http://sidux.com/backend.php?newlang=deu
-	grep -A 1 Warnung $TMP
-	rm -f $TMP
-}
-
-function getNewsEn()
-{
-	TMP="$(mktemp -p /tmp/ sidux-news-XXXXXXXXXX)"
-	wget -O $TMP -q -U "siduxcc-hermes" http://sidux.com/backend.php
-	grep -A 1 title $TMP | grep -B 1 link
-	rm -f $TMP
-}
-
-function getNewsDe()
-{
-	TMP="$(mktemp -p /tmp/ sidux-news-XXXXXXXXXX)"
-	wget -O $TMP -q -U "siduxcc-hermes" http://sidux.com/backend.php?newlang=deu
-	grep -A 1 title $TMP | grep -B 1 link
-	rm -f $TMP
-} 
 
 #------------------------------------------------------------------------------#
 #--- kernel functions ---------------------------------------------------------#

@@ -9,8 +9,9 @@ sidux-hermes (0.1.11) UNRELEASED; urgency=low
   * qt4: Show warnings improved   
   * debian: Description updated
   * qt4: RedAlerts added
+  * cli: Changed detection system
 
- -- Fabian Wuertz <xadras@sidux.com>  Thu, 06 Aug 2009 15:52:38 +0200
+ -- Fabian Wuertz <xadras@sidux.com>  Thu, 06 Aug 2009 16:29:22 +0200
 
 sidux-hermes (0.1.10) unstable; urgency=low
 
