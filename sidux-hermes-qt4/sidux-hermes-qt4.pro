@@ -1,6 +1,8 @@
 
 TEMPLATE = app
 CONFIG += qt
+QT += xml network
+
 
 CODECFORSRC = UTF-8
 CODECFORTR = ISO-8859-1
@@ -16,7 +18,7 @@ SOURCES += src/main.cpp \
 HEADERS += src/systray.h \
  src/upgradablePackages.h
 TARGET = sidux-hermes-qt4
-FORMS += src/upgradablePackages.ui
+FORMS += src/upgradablePackages.ui src/warnings.ui
 
 TRANSLATIONS = translations/sidux-hermes-qt4_da.ts \
  translations/sidux-hermes-qt4_de.ts \

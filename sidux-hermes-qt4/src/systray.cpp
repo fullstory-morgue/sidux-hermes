@@ -6,6 +6,8 @@
 #include <QMenu>
 #include <QMessageBox>
 #include <QListView>
+#include <QDomDocument>
+
 
 #include "systray.h"
 
@@ -51,43 +53,92 @@ SysTray::SysTray()
 	timer = new QTimer(this);
 	upWidget = new upgradablePackages();
 	
-	updateIcon();
+	
+
+	
+	connect(&http, SIGNAL(readyRead(const QHttpResponseHeader &)), this, SLOT(readFeed(const QHttpResponseHeader &)));
+	warningsWidget = new QWidget();
+	warningsGui.setupUi(warningsWidget);
+	fetchFeed(); // update icon
+	
+	
+	connect(&http2, SIGNAL(readyRead(const QHttpResponseHeader &)), this, SLOT(readKernel(const QHttpResponseHeader &)));
 }
 
-void SysTray::updateIcon()
+void SysTray::fetchFeed()
 {
+	xml.clear();
+	warningsGui.label->clear();
+	QUrl url("http://www.sidux.com/module-News-view-prop-Topic-cat-10006-theme-rss.html");
+	http.setHost(url.host());
+	http.get(url.path());
 
-	QString result  = readProcess("sidux-hermes", QStringList() );
+}
 
-	if ( result == "No connection to sidux.com!\n" )
-	{
+
+
+void SysTray::readFeed(const QHttpResponseHeader &resp)
+{
+	if (resp.statusCode() != 200) {
+		http.abort();
 		trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/disconnected.png") );
 		status = tr("No connection to sidux.com!");
 	}
-	else
-	{
-		if ( result == "Everything alright!\n" )
-		{
-			trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/ok-hermes.png") );
-			status = tr("No dist-upgrade warnings.");
-		}
-		else if( result.contains("Prealert") or result.contains("PREALERT") )
-		{
-			trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/prealert.png") );
-			status = tr("There are dist-upgrade pre-alerts. Please visit sidux.com for more information!");
-		}
-		else
-		{
-			trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/alert.png") );
-			status = tr("There are dist-upgrade alerts. Please visit sidux.com for more information!");
+	else {
+		xml.addData(http.readAll());
+		parseXml();
+		
+		
+	}
+	
+	trayIcon->setToolTip( status );
+	QTimer::singleShot(1800000, this, SLOT(fetchFeed()));
+}
+ 
+ 
+ 
+void SysTray::parseXml()
+{
+	while (!xml.atEnd()) {
+		xml.readNext();
+		if (xml.isStartElement()) {
+			currentTag = xml.name().toString();
+		} else if (xml.isEndElement()) {
+			if (xml.name() == "item") {
+				if( warningsGui.label->text().isEmpty() ) 
+					warningsGui.label->setText(title+description);
+				else 
+					warningsGui.label->setText(warningsGui.label->text()+"<br><br>"+title+description);
+				title.clear(); description.clear();
+			}
+		} else if (xml.isCharacters() && !xml.isWhitespace()) {
+			if (currentTag == "title")
+				title = "<b>"+xml.text().toString() + "</b><br><br>";
+			else if (currentTag == "description")
+				description = xml.text().toString();
 		}
 	}
-
-	trayIcon->setToolTip( status );
+	if (xml.error() && xml.error() != QXmlStreamReader::PrematureEndOfDocumentError) {
+	    qWarning() << "XML ERROR:" << xml.lineNumber() << ": " << xml.errorString();
+	    http.abort();
+	}
 	
-	QTimer::singleShot(1800000, this, SLOT(updateIcon()));
+	if( warningsGui.label->text().isEmpty() ) 
+	{
+		trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/ok-hermes.png") );
+		status = tr("No dist-upgrade warnings.");
+	}
+	else
+	{
+		trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/alert.png") );
+		status = tr("There are dist-upgrade alerts. Please visit sidux.com for more information!");
+	}
 	
 }
+
+ 
+
+
 
 
 //------------------------------------------------------------------------------
@@ -113,24 +164,73 @@ void SysTray::iconActivated(QSystemTrayIcon::ActivationReason reason)
 
 void SysTray::showMessage()
 {
-	trayIcon->showMessage ( tr("Status"), status, QSystemTrayIcon::Information, 10000 );
+ 
+	if( !warningsGui.label->text().isEmpty() ) 
+		warningsWidget->show();
+	else
+		trayIcon->showMessage ( tr("Status"), status, QSystemTrayIcon::Information, 10000 );
 }
 
 
 void SysTray::showKernel()
 {
 
+  
+  
+	if( currentKernel.isEmpty() ) {
+		QProcess exec;
+		exec.start("uname", (QStringList() << "-r") );
+		exec.waitForFinished();
+		currentKernel = QString( exec.readAll() ).replace("\n", "");
+	}
+	
+	
+	if( newestKernel.isEmpty() ) {	
+		QUrl url("http://sidux.com/debian/pool/main/l/linux-sidux-2.6/");
+		http2.setHost(url.host());
+		http2.get(url.path());
+	}
+	else{
+	      QString kernel;
+	      kernel += "\n"+tr("Current kernel")+": "+currentKernel;
+	      kernel += "\n"+tr("Newest  kernel")+": "+newestKernel;
+	      trayIcon->showMessage ( tr("Kernel informations"), kernel, QSystemTrayIcon::Information, 10000 );
+	}
+}
 
-	QString currentKernel = readProcess("sidux-hermes", (QStringList() << "--current-kernel") ).replace("\n", "");
-	QString newestKernel  = readProcess("sidux-hermes", (QStringList() << "--newest-kernel")  ).replace("\n", "");
 
+
+
+
+
+void SysTray::readKernel(const QHttpResponseHeader &resp)
+{
+	if (resp.statusCode() != 200) {
+		http2.abort();
+	}
+	else {
+	  	QString kernelTyp = "686";
+		if( currentKernel.contains("amd64") )
+			kernelTyp = "amd64";
+		QStringList fetchArray = QString( http2.readAll() ).split('"');
+		foreach(QString fetch, fetchArray) {
+			if(fetch.contains("linux-image") and fetch.contains(kernelTyp) and fetch.contains("slh") ) {
+				newestKernel = fetch.replace("linux-image-","");
+				newestKernel = newestKernel.split("_")[0];
+				break;
+			}
+		
+		}
+	}
+	
 	QString kernel;
-
 	kernel += "\n"+tr("Current kernel")+": "+currentKernel;
 	kernel += "\n"+tr("Newest  kernel")+": "+newestKernel;
-
 	trayIcon->showMessage ( tr("Kernel informations"), kernel, QSystemTrayIcon::Information, 10000 );
 }
+
+
+
 
 void SysTray::showAbout()
 {
