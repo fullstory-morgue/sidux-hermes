@@ -1,9 +1,5 @@
-sidux-hermes (0.1.11) UNRELEASED; urgency=low
+sidux-hermes (0.1.11) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * qt4: Changed detection system
   * qt4: Cli dependency removed
   * qt4: Show warnings improved   
