@@ -5,8 +5,9 @@ sidux-hermes (0.1.12) UNRELEASED; urgency=low
 
   [ Fabian Wuertz ]
   * qt4: Date to warning display added
+  * common package added
 
- -- Fabian Wuertz <xadras@sidux.com>  Sat, 08 Aug 2009 10:27:08 +0200
+ -- Fabian Wuertz <xadras@sidux.com>  Sat, 08 Aug 2009 15:07:55 +0200
 
 sidux-hermes (0.1.11) unstable; urgency=low
 
