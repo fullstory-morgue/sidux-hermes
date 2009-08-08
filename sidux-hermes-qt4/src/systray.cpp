@@ -107,19 +107,22 @@ void SysTray::parseXml()
 		} else if (xml.isEndElement()) {
 			if (xml.name() == "item") {
 				if( warningsGui.label->text().isEmpty() ) 
-					warningsGui.label->setText(title+description);
+					warningsGui.label->setText(title+"<br>"+pubDate+"<br><br>"+description);
 				else 
-					warningsGui.label->setText(warningsGui.label->text()+"<br><br>"+title+description);
-				title.clear(); description.clear();
+					warningsGui.label->setText(warningsGui.label->text()+"<br><br>"+title+"<br>"+pubDate+"<br><br>"+description);
+				title.clear(); description.clear(); pubDate.clear(); 
 			}
 		} else if (xml.isCharacters() && !xml.isWhitespace()) {
 			if (currentTag == "title") {
-				title = "<b>"+xml.text().toString() + "</b><br><br>";
+				title = "<b>"+xml.text().toString() + "</b>";
 				if( title.contains("Alert") or title.contains("ALERT"))
 					redAlert = true;
 			}
 			else if (currentTag == "description")
 				description = xml.text().toString();
+			else if (currentTag == "pubDate")
+				pubDate = xml.text().toString().replace(" +0000", "");
+			
 		}
 	}
 	if (xml.error() && xml.error() != QXmlStreamReader::PrematureEndOfDocumentError) {

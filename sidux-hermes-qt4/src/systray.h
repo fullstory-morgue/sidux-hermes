@@ -62,7 +62,7 @@ class SysTray : public QWidget
 		// warnings
 		Ui::warningsGui warningsGui;
 		QWidget *warningsWidget;
-		QString currentTag, title, description;
+		QString currentTag, title, description, pubDate;
 		QXmlStreamReader xml;
 		QHttp http;
 

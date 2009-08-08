@@ -1,8 +1,12 @@
 sidux-hermes (0.1.12) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 07 Aug 2009 06:50:10 +0200
+  [ Fabian Wuertz ]
+  * qt4: Date to warning display added
+
+ -- Fabian Wuertz <xadras@sidux.com>  Sat, 08 Aug 2009 10:27:08 +0200
 
 sidux-hermes (0.1.11) unstable; urgency=low
 
