@@ -1,13 +1,13 @@
-sidux-hermes (0.1.12) UNRELEASED; urgency=low
-
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
+sidux-hermes (0.1.12) unstable; urgency=low
 
   [ Fabian Wuertz ]
   * qt4: Date to warning display added
   * common package added
 
- -- Fabian Wuertz <xadras@sidux.com>  Sat, 08 Aug 2009 15:07:55 +0200
+  [ Stefan Lippers-Hollmann ]
+  * bump standards version to 3.8.2, no changes necessary.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 10 Aug 2009 00:31:58 +0200
 
 sidux-hermes (0.1.11) unstable; urgency=low
 
