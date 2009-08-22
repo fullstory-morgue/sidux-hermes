@@ -1,8 +1,12 @@
 sidux-hermes (0.1.13) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 10 Aug 2009 00:32:32 +0200
+  [ Fabian Wuertz ]
+  * qt4: connection problem solved
+
+ -- Fabian Wuertz <xadras@sidux.com>  Sat, 22 Aug 2009 22:29:39 +0200
 
 sidux-hermes (0.1.12) unstable; urgency=low
 

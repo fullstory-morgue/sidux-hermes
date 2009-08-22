@@ -79,10 +79,16 @@ void SysTray::fetchFeed()
 
 void SysTray::readFeed(const QHttpResponseHeader &resp)
 {
-	if (resp.statusCode() != 200) {
+ 
+	if(resp.statusCode() == 404) {
+		http.abort();
+		trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/ok-hermes.png") );
+		status = tr("No dist-upgrade warnings.");
+	}
+	else if (resp.statusCode() != 200) {
 		http.abort();
 		trayIcon->setIcon( QIcon("/usr/share/sidux-hermes/icons/disconnected.png") );
-		status = tr("No connection to sidux.com!");
+		status = tr("No connection to sidux.com!")+QString::number(resp.statusCode());
 	}
 	else {
 		xml.addData(http.readAll());
