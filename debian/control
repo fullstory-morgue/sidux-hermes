@@ -11,7 +11,7 @@ Build-Depends: cdbs,
                libqt4-dev,
                qt4-qmake,
                imagemagick
-Standards-Version: 3.8.1
+Standards-Version: 3.8.3
 
 Package: sidux-hermes
 Architecture: all
