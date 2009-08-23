@@ -1,9 +1,5 @@
-sidux-hermes (0.1.13) UNRELEASED; urgency=low
+sidux-hermes (0.1.13) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * qt4: connection problem solved
 
  -- Fabian Wuertz <xadras@sidux.com>  Sat, 22 Aug 2009 22:29:39 +0200
