@@ -3,21 +3,21 @@ Section: admin
 Priority: extra
 Maintainer: Fabian Wuertz <xadras@sidux.com>
 Uploaders: Joaquim Boura <x-un-i@sidux.com>,
-           Stefan Lippers-Hollmann <s.l-h@gmx.de>,
-           Ferdinand Thommes <devil@sidux.com>
+ Stefan Lippers-Hollmann <s.l-h@gmx.de>,
+ Ferdinand Thommes <devil@sidux.com>
 Build-Depends: cdbs,
-               debhelper (>= 7),
-               automake1.9,
-               libqt4-dev,
-               qt4-qmake,
-               imagemagick
+ debhelper (>= 7),
+ automake1.9,
+ libqt4-dev,
+ qt4-qmake,
+ imagemagick
 Standards-Version: 3.8.3
 
 Package: sidux-hermes
 Architecture: all
 Depends: ${misc:Depends},
-         wget,
-         apt-show-versions
+ wget,
+ apt-show-versions
 Description: sidux upgrade sentinel for the cli
  Console program that shows the status of the Debian sid repository.
  .
@@ -33,10 +33,10 @@ Description: sidux upgrade sentinel
 Package: sidux-hermes-gtk2
 Architecture: all
 Depends: ${misc:Depends},
-         sidux-hermes (= ${source:Version}),
-         sidux-hermes-common (= ${source:Version}),
-         python,
-         python-gtk2
+ sidux-hermes (= ${source:Version}),
+ sidux-hermes-common (= ${source:Version}),
+ python,
+ python-gtk2
 Conflicts: siduxcc-gtk2 (<= 0.12.12)
 Description: sidux upgrade sentinel for gtk2
  Gtk2 systray applet that shows the status of the Debian sid repository.
@@ -46,9 +46,9 @@ Description: sidux upgrade sentinel for gtk2
 Package: sidux-hermes-qt4
 Architecture: any
 Depends: ${misc:Depends},
-         ${shlibs:Depends},
-         sidux-hermes-common (= ${source:Version}),
-         sidux-apt-qt4
+ ${shlibs:Depends},
+ sidux-hermes-common (= ${source:Version}),
+ sidux-apt-qt4
 Description: sidux upgrade sentinel for qt4
  Qt4 systray applet that shows the status of the Debian sid repository.
  .

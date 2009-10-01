@@ -151,7 +151,7 @@ Befehl: apt-get -d dist-upgrade</translation>
         <source>To update your system you have to leave the 
 graphic modus. Press for this CTR+ALT+F1, 
 login as root and type init 3. After that 
-run the command smxi or siduxcc (Software-&gt;
+run siduxcc (Software-&gt;
 Dist-upgrade).</source>
         <translation>Für einen Systemupgrade muss der graphische 
 Modus verlassen werden. Hierzu CTR+ALT+F1 

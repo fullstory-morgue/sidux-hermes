@@ -1,8 +1,9 @@
-sidux-hermes (0.1.14) UNRELEASED; urgency=low
+sidux-hermes (0.1.14) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * fix broken advice.
+  * fix indention level in debian/control.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 23 Aug 2009 13:37:55 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 02 Oct 2009 00:37:48 +0200
 
 sidux-hermes (0.1.13) unstable; urgency=low
 

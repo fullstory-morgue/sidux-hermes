@@ -105,7 +105,7 @@ void upgradablePackages::displayPackages()
 
 void upgradablePackages::upgrade()
 {
-	QWhatsThis::showText( QCursor::pos(), tr("To update your system you have to leave the \ngraphic modus. Press for this CTR+ALT+F1, \nlogin as root and type init 3. After that \nrun the command smxi or siduxcc (Software->\nDist-upgrade)."), this );
+	QWhatsThis::showText( QCursor::pos(), tr("To update your system you have to leave the \ngraphic modus. Press for this CTR+ALT+F1, \nlogin as root and type init 3. After that \nrun siduxcc (Software->\nDist-upgrade)."), this );
 
 }
 
