@@ -2,6 +2,7 @@ sidux-hermes (0.1.15) ORPHANED; urgency=low
 
   * NOT RELEASED YET
   * ORPHAN PACKAGE
+  * refresh SVG graphics, shut up inkscape's migration from old versions.
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 10 Mar 2010 03:52:03 +0100
 
